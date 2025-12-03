@@ -1078,6 +1078,13 @@ body {
         text-align: left;
     }
 
+    .about-text p strong,
+    .qualifications-text strong,
+    .contact-text strong {
+        font-weight: 700 !important;
+        color: var(--text-dark);
+    }
+
     .nav-actions {
         flex-wrap: wrap;
         gap: 1rem;
