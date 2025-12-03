@@ -1063,6 +1063,21 @@ body {
         gap: 1rem;
     }
 
+    .nav-name-block {
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: left;
+    }
+
+    .nav-subtitle {
+        text-align: left;
+    }
+
     .nav-actions {
         flex-wrap: wrap;
         gap: 1rem;
@@ -1265,7 +1280,16 @@ body {
     }
 
     .logo {
-        font-size: 1.2rem;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .nav-name-block {
+        align-items: flex-start;
+    }
+
+    .nav-subtitle {
+        text-align: left;
     }
 
     .nav-menu {
