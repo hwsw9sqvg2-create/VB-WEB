@@ -9,6 +9,7 @@ const translations = {
         'nav.contact': 'Контакти',
         
         // Hero
+        'hero.name': 'VALENTYNA BALATSKA',
         'hero.title': 'ПРАКТИЧНИЙ ПСИХОЛОГ',
         'hero.numerology': 'СПЕЦІАЛІСТ З НУМЕРОЛОГІЇ ТА СИМВОЛІЗМУ',
         'hero.message': 'Допоможу знайти внутрішню гармонію та розкрити ваш потенціал!',
@@ -93,6 +94,7 @@ const translations = {
         'nav.contact': 'Contact',
         
         // Hero
+        'hero.name': 'VALENTYNA BALATSKA',
         'hero.title': 'PRACTICAL PSYCHOLOGIST',
         'hero.numerology': 'SPECIALIST IN NUMEROLOGY & SYMBOLISM',
         'hero.message': 'I will help you find inner harmony and unlock your potential!',
@@ -177,6 +179,7 @@ const translations = {
         'nav.contact': 'Контакты',
         
         // Hero
+        'hero.name': 'VALENTYNA BALATSKA',
         'hero.title': 'ПРАКТИЧЕСКИЙ ПСИХОЛОГ',
         'hero.numerology': 'СПЕЦИАЛИСТ ПО НУМЕРОЛОГИИ И СИМВОЛИЗМУ',
         'hero.message': 'Помогу найти внутреннюю гармонию и раскрыть ваш потенциал!',
@@ -281,13 +284,24 @@ function changeLanguage(lang) {
         }
     });
     
-    // Update active language button
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-lang') === lang) {
-            btn.classList.add('active');
+    // Update active language option and toggle text
+    const langNames = {
+        'uk': 'UA',
+        'en': 'EN',
+        'ru': 'RU'
+    };
+    
+    document.querySelectorAll('.lang-option').forEach(option => {
+        option.classList.remove('active');
+        if (option.getAttribute('data-lang') === lang) {
+            option.classList.add('active');
         }
     });
+    
+    const langToggle = document.querySelector('.lang-current');
+    if (langToggle) {
+        langToggle.textContent = langNames[lang] || 'UA';
+    }
 }
 
 // Initialize language on page load
@@ -295,13 +309,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set initial language
     changeLanguage(currentLang);
     
-    // Add event listeners to language buttons
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const lang = btn.getAttribute('data-lang');
-            changeLanguage(lang);
+    // Language switcher dropdown
+    const langToggle = document.querySelector('.lang-toggle');
+    const langSwitcher = document.querySelector('.language-switcher');
+    const langOptions = document.querySelectorAll('.lang-option');
+    
+    if (langToggle && langSwitcher) {
+        langToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langSwitcher.classList.toggle('active');
         });
-    });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!langSwitcher.contains(e.target)) {
+                langSwitcher.classList.remove('active');
+            }
+        });
+        
+        // Handle language option clicks
+        langOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const lang = option.getAttribute('data-lang');
+                changeLanguage(lang);
+                langSwitcher.classList.remove('active');
+            });
+        });
+    }
     
     // Mobile menu toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
