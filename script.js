@@ -384,27 +384,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Contact form handler
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Create mailto link with form data
-            const subject = encodeURIComponent('Повідомлення з сайту');
-            const body = encodeURIComponent(`Ім'я: ${name}\nEmail: ${email}\n\nПовідомлення:\n${message}`);
-            const mailtoLink = `mailto:valentina@psynumerologi.com?subject=${subject}&body=${body}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Reset form
-            contactForm.reset();
-        });
-    }
 });
 
