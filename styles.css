@@ -136,6 +136,12 @@ body {
     white-space: nowrap;
 }
 
+.nav-name-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
 .logo {
     font-size: 2rem;
     font-weight: 700;
@@ -143,6 +149,16 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    line-height: 1.2;
+}
+
+.nav-subtitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.3;
 }
 
 .mobile-menu-toggle {
