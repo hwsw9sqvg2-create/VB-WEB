@@ -9,7 +9,7 @@ const translations = {
         'nav.contact': 'Контакти',
         
         // Hero
-        'hero.name': 'VALENTYNA BALATSKA',
+        'hero.name': 'ВАЛЕНТИНА БАЛАЦЬКА',
         'hero.title': 'ПРАКТИЧНИЙ ПСИХОЛОГ',
         'hero.numerology': 'СПЕЦІАЛІСТ З НУМЕРОЛОГІЇ ТА СИМВОЛІЗМУ',
         'hero.message': 'Допоможу знайти внутрішню гармонію та розкрити ваш потенціал!',
@@ -179,7 +179,7 @@ const translations = {
         'nav.contact': 'Контакты',
         
         // Hero
-        'hero.name': 'VALENTYNA BALATSKA',
+        'hero.name': 'ВАЛЕНТИНА БАЛАЦКАЯ',
         'hero.title': 'ПРАКТИЧЕСКИЙ ПСИХОЛОГ',
         'hero.numerology': 'СПЕЦИАЛИСТ ПО НУМЕРОЛОГИИ И СИМВОЛИЗМУ',
         'hero.message': 'Помогу найти внутреннюю гармонию и раскрыть ваш потенциал!',
