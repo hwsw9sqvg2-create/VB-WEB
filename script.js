@@ -7,11 +7,13 @@ const translations = {
         'nav.qualifications': 'Кваліфікація',
         'nav.testimonials': 'Відгуки',
         'nav.contact': 'Контакти',
+        'nav.subtitle1': 'ПРАКТИЧНИЙ ПСИХОЛОГ',
+        'nav.subtitle2': 'СПЕЦІАЛІСТ З НУМЕРОЛОГІЇ та СИМВОЛІЗМУ',
         
         // Hero
         'hero.name': 'ВАЛЕНТИНА БАЛАЦЬКА',
         'hero.title': 'ПРАКТИЧНИЙ ПСИХОЛОГ',
-        'hero.numerology': 'СПЕЦІАЛІСТ З НУМЕРОЛОГІЇ та СИМВОЛІЗМУ',
+        'hero.numerology': 'СПЕЦІАЛІСТ З НУМЕРОЛОГІЇ ТА СИМВОЛІЗМУ',
         'hero.message': 'Допоможу знайти внутрішню гармонію та розкрити ваш потенціал!',
         'hero.cta': 'Записатися на консультацію',
         
@@ -92,6 +94,8 @@ const translations = {
         'nav.qualifications': 'Qualifications',
         'nav.testimonials': 'Testimonials',
         'nav.contact': 'Contact',
+        'nav.subtitle1': 'PRACTICAL PSYCHOLOGIST',
+        'nav.subtitle2': 'SPECIALIST IN NUMEROLOGY & SYMBOLISM',
         
         // Hero
         'hero.name': 'VALENTYNA BALATSKA',
@@ -177,6 +181,8 @@ const translations = {
         'nav.qualifications': 'Квалификация',
         'nav.testimonials': 'Отзывы',
         'nav.contact': 'Контакты',
+        'nav.subtitle1': 'ПРАКТИЧЕСКИЙ ПСИХОЛОГ',
+        'nav.subtitle2': 'СПЕЦИАЛИСТ ПО НУМЕРОЛОГИИ И СИМВОЛИЗМУ',
         
         // Hero
         'hero.name': 'ВАЛЕНТИНА БАЛАЦКАЯ',
