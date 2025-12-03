@@ -18,7 +18,7 @@ const translations = {
         'about.title': 'Про мене',
         'about.greeting': 'Вітаю!',
         'about.intro': 'Я, Валентина Балацька, практичний психолог, спеціаліст з нумерології та символізму.',
-        'about.approaches': 'Я вивчала різноманітні підходи і на зараз виділяю в своїй роботі два: системно-феноменологічний підхід — дозволяє піти в глибину і побачити першопричини життєвих проблем; когнітивно-поведінкова терапія — дозволяє тут і зараз змінювати укорінене мислення.',
+        'about.approaches': 'Я вивчала різноманітні підходи і на зараз виділяю в своїй роботі два: <strong>системно-феноменологічний підхід</strong> — дозволяє піти в глибину і побачити першопричини життєвих проблем; <strong>когнітивно-поведінкова терапія</strong> — дозволяє тут і зараз змінювати укорінене мислення.',
         'about.tools': 'Нумерологія і символізм — прекрасні інструменти для швидкої і якісної діагностики та пошуку векторів корекції.',
         'about.question': 'Що ще я маю, чим можу бути корисна?',
         'about.experience': 'Я на власному прикладі знаю, як:',
@@ -102,7 +102,7 @@ const translations = {
         'about.title': 'About Me',
         'about.greeting': 'Hello!',
         'about.intro': 'I, Valentyna Balatska, am a practical psychologist, specialist in numerology and symbolism.',
-        'about.approaches': 'I have studied various approaches and currently focus on two in my work: systemic-phenomenological approach — allows going deep and seeing the root causes of life problems; cognitive-behavioral therapy — allows changing ingrained thinking here and now.',
+        'about.approaches': 'I have studied various approaches and currently focus on two in my work: <strong>systemic-phenomenological approach</strong> — allows going deep and seeing the root causes of life problems; <strong>cognitive-behavioral therapy</strong> — allows changing ingrained thinking here and now.',
         'about.tools': 'Numerology and symbolism are wonderful tools for quick and quality diagnostics and finding correction vectors.',
         'about.question': 'What else do I have that can be useful?',
         'about.experience': 'I know from my own experience how to:',
@@ -186,7 +186,7 @@ const translations = {
         'about.title': 'Обо мне',
         'about.greeting': 'Здравствуйте!',
         'about.intro': 'Я, Валентина Балацкая, практический психолог, специалист по нумерологии и символизму.',
-        'about.approaches': 'Я изучала различные подходы и сейчас выделяю в своей работе два: системно-феноменологический подход — позволяет пойти в глубину и увидеть первопричины жизненных проблем; когнитивно-поведенческая терапия — позволяет здесь и сейчас менять укорененное мышление.',
+        'about.approaches': 'Я изучала различные подходы и сейчас выделяю в своей работе два: <strong>системно-феноменологический подход</strong> — позволяет пойти в глубину и увидеть первопричины жизненных проблем; <strong>когнитивно-поведенческая терапия</strong> — позволяет здесь и сейчас менять укорененное мышление.',
         'about.tools': 'Нумерология и символизм — прекрасные инструменты для быстрой и качественной диагностики и поиска векторов коррекции.',
         'about.question': 'Что еще я имею, чем могу быть полезна?',
         'about.experience': 'Я на собственном примере знаю, как:',
@@ -268,7 +268,8 @@ function changeLanguage(lang) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
-            element.textContent = translations[lang][key];
+            // Use innerHTML to support HTML tags like <strong>
+            element.innerHTML = translations[lang][key];
         }
     });
     
