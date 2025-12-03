@@ -32,9 +32,7 @@ body {
 
 /* Language Switcher */
 .language-switcher {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+    position: relative;
     z-index: 1000;
 }
 
@@ -125,6 +123,17 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-cta {
+    white-space: nowrap;
 }
 
 .logo {
@@ -1031,9 +1040,21 @@ body {
         margin-bottom: 1.5rem;
     }
 
-    .language-switcher {
-        top: 10px;
-        right: 10px;
+    .nav-content {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nav-actions {
+        flex-wrap: wrap;
+        gap: 1rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-cta {
+        font-size: 0.9rem;
+        padding: 12px 24px;
     }
 
     .lang-toggle {
