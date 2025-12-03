@@ -323,6 +323,31 @@ body {
     text-align: justify;
 }
 
+.experience-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1.5rem 0;
+}
+
+.experience-list li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    text-align: justify;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.experience-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
 /* Services Section */
 .services-grid {
     display: grid;
