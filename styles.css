@@ -146,6 +146,9 @@ body::-webkit-scrollbar {
     padding: 1rem 0;
     width: 100%;
     max-width: 100vw;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .nav-content {
@@ -153,6 +156,8 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    overflow: hidden;
+    width: 100%;
 }
 
 .nav-actions {
