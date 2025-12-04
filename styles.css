@@ -1083,12 +1083,15 @@ body {
     .contact-links {
         flex-direction: column;
         align-items: center;
-        gap: 2mm;
     }
 
     .contact-link {
         width: 220px;
         justify-content: center;
+    }
+
+    .contact-link:not(:last-child) {
+        margin-bottom: 3mm;
     }
 
     .contact-form {
