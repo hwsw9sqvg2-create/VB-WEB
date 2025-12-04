@@ -145,14 +145,14 @@ const translations = {
         'qualifications.title': 'Qualifications & Education',
         'qualifications.diploma.title': 'Certified Psychologist',
         'qualifications.diploma.desc': 'Higher education in "Practical Psychology" from the Taras Shevchenko Institute of Postgraduate Education',
-        'qualifications.constellations.title': 'Systemic Family Constellations',
+        'qualifications.constellations.title': 'Family Systemic Constellations',
         'qualifications.constellations.desc': 'Therapist certificate in systemic-phenomenological approach from UpPro School',
         'qualifications.cbt.title': 'Cognitive Behavioral Therapy',
         'qualifications.cbt.desc': 'Currently studying 3rd method of CBT (Cognitive Behavioral Therapy) at UpPro School',
         'qualifications.membership.title': 'Cognitive-Behavioral Therapy (Professional Development)',
         
         // Testimonials
-        'testimonials.title': 'Testimonials',
+        'testimonials.title': 'Client Testimonials',
         'testimonials.testimonial1.text': '"Consultations with Valentyna helped me find inner harmony and deal with life challenges. Highly recommend!"',
         'testimonials.testimonial1.author': '— Elena, Kyiv',
         'testimonials.testimonial2.text': '"Numerology opened new perspectives for me. Valentyna professionally helped me understand my strengths."',
