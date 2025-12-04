@@ -59,8 +59,7 @@ const translations = {
         'qualifications.constellations.desc': 'Сертифікат терапевта в методі системно-феноменологічного підходу від UpPro School',
         'qualifications.cbt.title': 'Когнітивно-поведінкова терапія',
         'qualifications.cbt.desc': 'Наразі проходжу навчання 3 методу КПТ (когнітивно-поведінкова терапія) в UpPro School',
-        'qualifications.membership.title': 'Членство в професійній організації',
-        'qualifications.membership.desc': 'Дійсний член УАСР (Українська Асоціація Сімейних Розстановок)',
+        'qualifications.membership.title': 'Когнітивно-поведінкова терапія (підвищення кваліфікації)',
         
         // Testimonials
         'testimonials.title': 'Відгуки клієнтів',
@@ -150,8 +149,7 @@ const translations = {
         'qualifications.constellations.desc': 'Therapist certificate in systemic-phenomenological approach from UpPro School',
         'qualifications.cbt.title': 'Cognitive Behavioral Therapy',
         'qualifications.cbt.desc': 'Currently studying 3rd method of CBT (Cognitive Behavioral Therapy) at UpPro School',
-        'qualifications.membership.title': 'Professional Membership',
-        'qualifications.membership.desc': 'Active member of UASR (Ukrainian Association of Systemic Constellations)',
+        'qualifications.membership.title': 'Cognitive-Behavioral Therapy (Professional Development)',
         
         // Testimonials
         'testimonials.title': 'Client Testimonials',
@@ -241,8 +239,7 @@ const translations = {
         'qualifications.constellations.desc': 'Сертификат терапевта в методе системно-феноменологического подхода от UpPro School',
         'qualifications.cbt.title': 'Когнитивно-поведенческая терапия',
         'qualifications.cbt.desc': 'В настоящее время прохожу обучение 3 методу КПТ (когнитивно-поведенческая терапия) в UpPro School',
-        'qualifications.membership.title': 'Членство в профессиональной организации',
-        'qualifications.membership.desc': 'Действительный член УАСР (Украинская Ассоциация Семейных Расстановок)',
+        'qualifications.membership.title': 'Когнитивно-поведенческая терапия (повышение квалификации)',
         
         // Testimonials
         'testimonials.title': 'Отзывы клиентов',
