@@ -1079,14 +1079,28 @@ html {
         margin-bottom: 1.5rem;
     }
 
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
+    
+    .section:first-of-type {
+        padding-top: 140px;
+    }
+
     .nav-content {
         flex-wrap: wrap;
         gap: 1rem;
     }
 
     .navbar {
-        position: sticky;
+        position: fixed;
         top: 0;
+        left: 0;
+        right: 0;
         z-index: 999;
     }
 
@@ -1237,6 +1251,10 @@ html {
 
     .section {
         padding: 40px 0;
+    }
+    
+    .section:first-of-type {
+        padding-top: 160px;
     }
 
     #about.section,
