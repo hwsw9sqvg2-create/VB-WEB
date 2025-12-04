@@ -1138,7 +1138,7 @@ body {
     .about-text p strong,
     .qualifications-text strong,
     .contact-text strong {
-        font-weight: 700;
+        font-weight: 900;
         color: var(--text-dark);
     }
 }
@@ -1254,7 +1254,7 @@ body {
     .about-text p strong,
     .qualifications-text strong,
     .contact-text strong {
-        font-weight: 700;
+        font-weight: 900;
         color: var(--text-dark);
     }
 
