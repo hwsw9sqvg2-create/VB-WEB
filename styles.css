@@ -727,6 +727,7 @@ body {
 .contact-link {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     padding: 12px 24px;
     background: var(--white);
@@ -738,8 +739,8 @@ body {
     font-weight: 500;
     white-space: nowrap;
     font-size: 0.9rem;
-    min-width: fit-content;
-    max-width: fit-content;
+    width: 220px;
+    flex: 0 0 auto;
 }
 
 .contact-link:hover {
@@ -1081,12 +1082,12 @@ body {
 
     .contact-links {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
         gap: 1rem;
     }
 
     .contact-link {
-        width: 100%;
+        width: 220px;
         justify-content: center;
     }
 
