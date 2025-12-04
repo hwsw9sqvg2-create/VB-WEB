@@ -1154,6 +1154,8 @@ body {
         font-weight: 900 !important;
         color: var(--text-dark);
         font-size: 1.15em;
+        text-shadow: 0.5px 0 0 currentColor, -0.5px 0 0 currentColor, 0 0.5px 0 currentColor, 0 -0.5px 0 currentColor;
+        letter-spacing: 0.03em;
     }
 
     .nav-actions {
