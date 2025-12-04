@@ -20,8 +20,6 @@ html {
     overflow-x: hidden;
     width: 100%;
     max-width: 100vw;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
 }
 
 body {
@@ -33,8 +31,6 @@ body {
     width: 100%;
     max-width: 100vw;
     position: relative;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -902,9 +898,7 @@ body {
 
     .nav-content {
         justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        gap: 1rem;
+        align-items: center;
     }
 
     .mobile-menu-toggle.active span:nth-child(1) {
@@ -922,49 +916,6 @@ body {
     .section-title {
         font-size: 2rem;
     }
-    
-    /* Улучшенная навигация для мобильных */
-    .navbar {
-        padding: 0.75rem 0;
-    }
-    
-    .nav-name-block {
-        width: 100%;
-        order: 1;
-        margin-bottom: 0.5rem;
-    }
-    
-    .nav-actions {
-        width: 100%;
-        order: 2;
-        justify-content: space-between;
-        gap: 0.75rem;
-        flex-wrap: nowrap;
-    }
-    
-    .nav-cta {
-        flex: 1;
-        min-width: 0;
-        text-align: center;
-        font-size: 0.85rem;
-        padding: 12px 16px;
-        white-space: normal;
-        word-wrap: break-word;
-    }
-    
-    .language-switcher {
-        flex-shrink: 0;
-    }
-    
-    .logo {
-        font-size: 1.8rem;
-        line-height: 1.2;
-    }
-    
-    .nav-subtitle {
-        font-size: 0.75rem;
-        line-height: 1.3;
-    }
 
     .about-content {
         grid-template-columns: 1fr;
@@ -981,8 +932,6 @@ body {
         width: 100%;
         height: auto;
         min-height: auto;
-        max-height: 400px;
-        object-fit: cover;
         border-radius: 0;
     }
 
@@ -1063,11 +1012,9 @@ body {
 
     .contact-video {
         width: 100%;
-        height: auto;
-        max-height: 500px;
+        height: 100%;
         max-width: 100%;
         object-fit: cover;
-        border-radius: 0;
     }
 
     .contact-text {
@@ -1114,14 +1061,6 @@ body {
     .contact-link {
         width: 100%;
         justify-content: center;
-        padding: 16px 24px;
-        font-size: 1rem;
-        min-height: 48px;
-        touch-action: manipulation;
-    }
-    
-    .contact-link:active {
-        transform: scale(0.98);
     }
 
     .contact-form {
@@ -1175,33 +1114,26 @@ body {
     .about-text p strong,
     .qualifications-text strong,
     .contact-text strong {
-        font-weight: 900 !important;
+        font-weight: 700 !important;
         color: var(--text-dark);
         font-size: 1.15em;
     }
 
     .nav-actions {
-        flex-wrap: nowrap;
-        gap: 0.75rem;
+        flex-wrap: wrap;
+        gap: 1rem;
         width: 100%;
         justify-content: space-between;
-        align-items: center;
     }
 
     .nav-cta {
-        font-size: 0.85rem;
-        padding: 12px 16px;
-        flex: 1;
-        min-width: 0;
-        text-align: center;
-        white-space: normal;
-        line-height: 1.3;
+        font-size: 0.9rem;
+        padding: 12px 24px;
     }
 
     .lang-toggle {
-        padding: 10px 14px;
+        padding: 8px 12px;
         font-size: 0.8rem;
-        flex-shrink: 0;
     }
 
     .lang-dropdown {
@@ -1247,9 +1179,8 @@ body {
     .about-text p strong,
     .qualifications-text strong,
     .contact-text strong {
-        font-weight: 900 !important;
+        font-weight: 700;
         color: var(--text-dark);
-        font-size: 1.15em;
     }
 }
 
@@ -1281,28 +1212,26 @@ body {
 
 @media (max-width: 480px) {
     .hero {
-        padding: 80px 0 40px;
+        padding: 60px 0 40px;
     }
 
     .hero-name {
-        font-size: 1.8rem;
+        font-size: 2rem;
         line-height: 1.2;
     }
 
     .hero-title {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         line-height: 1.2;
     }
 
     .hero-numerology {
-        font-size: 0.85rem;
-        line-height: 1.3;
+        font-size: 0.9rem;
     }
 
     .hero-message {
-        font-size: 0.95rem;
+        font-size: 1rem;
         margin-bottom: 1.5rem;
-        line-height: 1.5;
     }
 
     .hero-content {
@@ -1320,39 +1249,34 @@ body {
     }
 
     .section-title {
-        font-size: 1.75rem;
+        font-size: 1.8rem;
         margin-bottom: 2rem;
-        padding: 0 10px;
     }
 
     .section-title-left {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         margin-bottom: 1.5rem;
     }
 
     .about-text,
     .qualifications-text,
     .contact-text {
-        padding: 1.75rem 1.25rem;
+        padding: 2rem 1.5rem;
     }
 
     .qualifications-content,
     .contact-content {
-        min-height: 500px;
+        min-height: 600px;
     }
 
     .qualification-item {
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(3px);
-        padding: 1.25rem;
     }
 
     .contact-link {
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(3px);
-        padding: 14px 20px;
-        font-size: 0.95rem;
-        min-height: 50px;
     }
 
     .contact-form {
@@ -1363,33 +1287,30 @@ body {
     }
 
     .about-text p,
-    .qualifications-text p,
-    .contact-text p {
-        font-size: 0.95rem;
+    .qualifications-text p {
+        font-size: 1rem;
         line-height: 1.6;
-        margin-bottom: 1.25rem;
     }
 
     .about-text p strong,
     .qualifications-text strong,
     .contact-text strong {
-        font-weight: 900 !important;
+        font-weight: 700 !important;
         color: var(--text-dark);
-        font-size: 1.1em;
+        font-size: 1.15em;
     }
 
     .service-card {
-        padding: 1.75rem 1.25rem;
+        padding: 2rem 1.5rem;
     }
 
     .qualification-item {
-        padding: 1.25rem;
-        gap: 0.75rem;
+        padding: 1.5rem;
+        gap: 1rem;
     }
 
     .contact-description {
-        font-size: 0.95rem;
-        margin-bottom: 1.5rem;
+        font-size: 1rem;
     }
 
     .business-info {
@@ -1401,20 +1322,16 @@ body {
     }
 
     .logo {
-        font-size: 1.6rem;
+        font-size: 2rem;
         font-weight: 700;
-        line-height: 1.2;
     }
 
     .nav-name-block {
         align-items: flex-start;
-        width: 100%;
     }
 
     .nav-subtitle {
         text-align: left;
-        font-size: 0.7rem;
-        line-height: 1.2;
     }
 
     .nav-menu {
@@ -1423,77 +1340,6 @@ body {
 
     .nav-menu a {
         font-size: 0.9rem;
-    }
-    
-    /* Улучшения для очень маленьких экранов */
-    .nav-actions {
-        flex-direction: column;
-        gap: 0.75rem;
-        width: 100%;
-    }
-    
-    .nav-cta {
-        width: 100%;
-        font-size: 0.8rem;
-        padding: 14px 20px;
-    }
-    
-    .language-switcher {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    .lang-toggle {
-        padding: 10px 16px;
-    }
-    
-    /* Улучшение отступов для секций */
-    .about-text,
-    .qualifications-text,
-    .contact-text {
-        padding: 1.5rem 1rem;
-    }
-    
-    /* Улучшение карточек услуг */
-    .service-card h3 {
-        font-size: 1.25rem;
-    }
-    
-    .service-card p {
-        font-size: 0.9rem;
-    }
-    
-    /* Улучшение отзывов */
-    .testimonial-card {
-        padding: 1.5rem 1rem;
-    }
-    
-    .testimonial-text {
-        font-size: 1rem;
-    }
-    
-    /* Улучшение квалификаций */
-    .qual-content h3 {
-        font-size: 1.15rem;
-    }
-    
-    .qual-content p {
-        font-size: 0.9rem;
-    }
-    
-    /* Улучшение видео в контактах */
-    .contact-video {
-        width: 100%;
-        height: auto;
-        max-height: 400px;
-        object-fit: cover;
-    }
-    
-    /* Улучшение футера */
-    .footer {
-        padding: 1.5rem 0;
-        font-size: 0.85rem;
     }
 }
 
