@@ -595,9 +595,65 @@ body {
     color: var(--text-dark);
 }
 
+.qualification-item:first-of-type .qual-content {
+    text-align: center;
+    width: 100%;
+}
+
+.qualification-item:first-of-type .qual-content h3 {
+    text-align: center;
+}
+
+.qualification-item:nth-of-type(2) .qual-content {
+    text-align: center;
+    width: 100%;
+}
+
+.qualification-item:nth-of-type(2) .qual-content h3 {
+    text-align: center;
+}
+
+.qualification-item:nth-of-type(3) .qual-content {
+    text-align: center;
+    width: 100%;
+}
+
+.qualification-item:nth-of-type(3) .qual-content h3 {
+    text-align: center;
+}
+
+.qualification-item:nth-of-type(4) .qual-content {
+    text-align: center;
+    width: 100%;
+}
+
+.qualification-item:nth-of-type(4) .qual-content h3 {
+    text-align: center;
+}
+
 .qual-content p {
     color: var(--text-light);
     line-height: 1.6;
+}
+
+.qual-diploma-image {
+    margin-top: 1.5rem;
+    width: 76.5%;
+    max-width: 76.5%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.diploma-photo {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+    border-radius: 10px;
 }
 
 /* Contact Section */
