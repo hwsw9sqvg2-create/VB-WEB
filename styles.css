@@ -1213,8 +1213,8 @@ body {
     }
 }
 
-/* Large screens - prevent wrapping */
-@media (min-width: 1200px) {
+/* Screens 768px and wider - prevent wrapping */
+@media (min-width: 768px) {
     .contact-links {
         flex-wrap: nowrap;
     }
