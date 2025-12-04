@@ -40,12 +40,16 @@ const translations = {
         
         // Services
         'services.title': 'Мої послуги',
-        'services.consultation.title': 'Індивідуальні консультації',
-        'services.consultation.desc': 'Онлайн консультації з психології та нумерології через ZOOM',
-        'services.webinar.title': 'Вебінари та семінари',
-        'services.webinar.desc': 'Груповий формат навчання та обговорення важливих тем',
-        'services.training.title': 'Навчання',
-        'services.training.desc': 'Групові та індивідуальні курси з нумерології, символізму та психології',
+        'services.consultation.title': 'Індивідуальна психологічна консультація',
+        'services.consultation.price': '2000 грн / одна година',
+        'services.consultation.desc': 'онлайн консультація через ZOOM',
+        'services.webinar.title': 'Розстановки',
+        'services.webinar.individual': 'Індивідуальна - 4200 грн',
+        'services.webinar.group': 'Групова - 3000 грн',
+        'services.webinar.substitute': 'Замісник - 500 грн',
+        'services.training.title': 'Нумерологічна консультація + діагностика та корекція через символізм',
+        'services.training.price': '6300 грн',
+        'services.training.desc': 'Комплекс, який включає в себе повний нумерологічний розбір, короткий прогноз на рік та діагностику і корекцію через символізм.',
         
         // Qualifications
         'qualifications.title': 'Кваліфікація та освіта',
@@ -127,12 +131,16 @@ const translations = {
         
         // Services
         'services.title': 'My Services',
-        'services.consultation.title': 'Individual Consultations',
-        'services.consultation.desc': 'Online consultations in psychology and numerology via ZOOM',
-        'services.webinar.title': 'Webinars & Seminars',
-        'services.webinar.desc': 'Group format learning and discussion of important topics',
-        'services.training.title': 'Training',
-        'services.training.desc': 'Group and individual courses in numerology, symbolism, and psychology',
+        'services.consultation.title': 'Individual Psychological Consultation',
+        'services.consultation.price': '50 USD / one hour',
+        'services.consultation.desc': 'online consultation via ZOOM',
+        'services.webinar.title': 'Constellations',
+        'services.webinar.individual': 'Individual - 100 USD',
+        'services.webinar.group': 'Group - 75 USD',
+        'services.webinar.substitute': 'Substitute - 15 USD',
+        'services.training.title': 'Numerological Consultation + Diagnosis and Correction through Symbolism',
+        'services.training.price': '150 USD',
+        'services.training.desc': 'A complex that includes a complete numerological analysis, a short forecast for the year, and diagnosis and correction through symbolism.',
         
         // Qualifications
         'qualifications.title': 'Qualifications & Education',
@@ -214,12 +222,16 @@ const translations = {
         
         // Services
         'services.title': 'Мои услуги',
-        'services.consultation.title': 'Индивидуальные консультации',
-        'services.consultation.desc': 'Онлайн консультации по психологии и нумерологии через ZOOM',
-        'services.webinar.title': 'Вебинары и семинары',
-        'services.webinar.desc': 'Групповой формат обучения и обсуждение важных тем',
-        'services.training.title': 'Обучение',
-        'services.training.desc': 'Групповые и индивидуальные курсы по нумерологии, символизму и психологии',
+        'services.consultation.title': 'Индивидуальная психологическая консультация',
+        'services.consultation.price': '50 долл США / один час',
+        'services.consultation.desc': 'онлайн консультация через ZOOM',
+        'services.webinar.title': 'Расстановки',
+        'services.webinar.individual': 'Индивидуальная - 100 долл США',
+        'services.webinar.group': 'Групповая - 75 долл США',
+        'services.webinar.substitute': 'Заместитель - 15 долл США',
+        'services.training.title': 'Нумерологическая консультация + диагностика и коррекция через символизм',
+        'services.training.price': '150 долл США',
+        'services.training.desc': 'Комплекс, который включает в себя полный нумерологический разбор, краткий прогноз на год и диагностику и коррекцию через символизм.',
         
         // Qualifications
         'qualifications.title': 'Квалификация и образование',
@@ -290,24 +302,13 @@ function changeLanguage(lang) {
         }
     });
     
-    // Update active language option and toggle text
-    const langNames = {
-        'uk': 'UA',
-        'en': 'EN',
-        'ru': 'RU'
-    };
-    
-    document.querySelectorAll('.lang-option').forEach(option => {
-        option.classList.remove('active');
-        if (option.getAttribute('data-lang') === lang) {
-            option.classList.add('active');
+    // Update active language button
+    document.querySelectorAll('.lang-btn').forEach(button => {
+        button.classList.remove('active');
+        if (button.getAttribute('data-lang') === lang) {
+            button.classList.add('active');
         }
     });
-    
-    const langToggle = document.querySelector('.lang-current');
-    if (langToggle) {
-        langToggle.textContent = langNames[lang] || 'UA';
-    }
 }
 
 // Initialize language on page load
@@ -315,30 +316,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set initial language
     changeLanguage(currentLang);
     
-    // Language switcher dropdown
-    const langToggle = document.querySelector('.lang-toggle');
-    const langSwitcher = document.querySelector('.language-switcher');
-    const langOptions = document.querySelectorAll('.lang-option');
+    // Language switcher buttons
+    const langButtons = document.querySelectorAll('.lang-btn');
     
-    if (langToggle && langSwitcher) {
-        langToggle.addEventListener('click', (e) => {
-            e.stopPropagation();
-            langSwitcher.classList.toggle('active');
-        });
-        
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!langSwitcher.contains(e.target)) {
-                langSwitcher.classList.remove('active');
-            }
-        });
-        
-        // Handle language option clicks
-        langOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                const lang = option.getAttribute('data-lang');
+    if (langButtons.length > 0) {
+        langButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const lang = button.getAttribute('data-lang');
                 changeLanguage(lang);
-                langSwitcher.classList.remove('active');
             });
         });
     }
