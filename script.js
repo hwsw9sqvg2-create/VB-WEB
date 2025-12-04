@@ -152,7 +152,7 @@ const translations = {
         'qualifications.membership.title': 'Cognitive-Behavioral Therapy (Professional Development)',
         
         // Testimonials
-        'testimonials.title': 'Client Testimonials',
+        'testimonials.title': 'Testimonials',
         'testimonials.testimonial1.text': '"Consultations with Valentyna helped me find inner harmony and deal with life challenges. Highly recommend!"',
         'testimonials.testimonial1.author': '— Elena, Kyiv',
         'testimonials.testimonial2.text': '"Numerology opened new perspectives for me. Valentyna professionally helped me understand my strengths."',
