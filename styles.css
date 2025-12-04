@@ -1086,6 +1086,21 @@ body {
         width: 100%;
         justify-content: center;
     }
+}
+
+/* Tablet and larger screens - keep contact links in a row */
+@media (min-width: 769px) {
+    .contact-links {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .contact-link {
+        width: auto;
+        flex: 0 0 auto;
+    }
 
     .contact-form {
         margin-top: 1.5rem;
