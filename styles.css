@@ -323,6 +323,8 @@ body {
 .btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-hover);
+    background: var(--gradient);
+    color: var(--white);
 }
 
 /* Sections */
@@ -352,6 +354,19 @@ body {
 .testimonials-title-link {
     display: inline-block;
     text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.testimonials-title-link:hover {
+    -webkit-text-fill-color: var(--white);
+    background: var(--gradient);
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
 }
 
 .section-title-left {
@@ -868,10 +883,10 @@ body {
 
 @keyframes marquee {
     0% {
-        transform: translateX(0);
+        transform: translateX(calc(-50% - 1rem));
     }
     100% {
-        transform: translateX(calc(-50% - 1rem));
+        transform: translateX(0);
     }
 }
 
