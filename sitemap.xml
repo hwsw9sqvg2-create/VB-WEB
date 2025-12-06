@@ -11,6 +11,24 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://psynumerology.com/"/>
     </url>
     <url>
+        <loc>https://psynumerology.com/booking.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://psynumerology.com/booking-private-session.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://psynumerology.com/booking-numerology.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://psynumerology.com/NUM-Calendar-privacy-polycy.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
