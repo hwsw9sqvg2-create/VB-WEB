@@ -53,193 +53,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <style>
-        /* Booking Modal Styles */
-        .booking-modal {
-            display: none;
-            position: fixed;
-            z-index: 10000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        
-        .booking-modal.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .booking-modal-content {
-            background-color: var(--white);
-            margin: auto;
-            padding: 0;
-            border-radius: 12px;
-            width: 90%;
-            max-width: 800px;
-            max-height: 90vh;
-            overflow-y: auto;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            position: relative;
-        }
-        
-        .booking-modal-header {
-            padding: 2rem;
-            border-bottom: 1px solid #e0e0e0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            background: var(--white);
-            z-index: 10;
-        }
-        
-        .booking-modal-header h2 {
-            margin: 0;
-            color: var(--primary-color);
-            font-size: 1.8rem;
-        }
-        
-        .close-modal {
-            color: var(--text-light);
-            font-size: 2rem;
-            font-weight: bold;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 0;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: color 0.3s ease;
-        }
-        
-        .close-modal:hover {
-            color: var(--text-dark);
-        }
-        
-        .booking-services {
-            padding: 2rem;
-        }
-        
-        .service-block {
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            transition: all 0.3s ease;
-        }
-        
-        .service-block:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-block:last-child {
-            margin-bottom: 0;
-        }
-        
-        .service-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-        }
-        
-        .service-price {
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .service-description {
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-        }
-        
-        .service-meta {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .service-meta-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.4rem 0.8rem;
-            background: #f5f5f5;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            color: var(--text-dark);
-        }
-        
-        .service-meta-item svg {
-            width: 16px;
-            height: 16px;
-        }
-        
-        .service-select-btn {
-            width: 100%;
-            padding: 0.75rem 1.5rem;
-            background: var(--gradient);
-            color: var(--white);
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .service-select-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(61, 74, 42, 0.3);
-        }
-        
-        .calendar-container {
-            display: none;
-            padding: 2rem;
-        }
-        
-        .calendar-container.active {
-            display: block;
-        }
-        
-        .calendar-back-btn {
-            background: none;
-            border: none;
-            color: var(--primary-color);
-            font-size: 1rem;
-            cursor: pointer;
-            padding: 0.5rem 0;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: color 0.3s ease;
-        }
-        
-        .calendar-back-btn:hover {
-            color: var(--primary-dark);
-        }
-        
-        .calendar-wrapper {
-            min-height: 600px;
-        }
-        
-        .calendar-wrapper > div {
-            min-height: 600px;
-        }
-    </style>
-    
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -472,7 +285,7 @@
                     <div class="nav-subtitle" data-i18n="nav.subtitle2">СПЕЦІАЛІСТ З НУМЕРОЛОГІЇ та СИМВОЛІЗМУ</div>
                 </div>
                 <div class="nav-actions">
-                    <button class="btn btn-primary nav-cta" data-i18n="hero.cta" onclick="openBookingModal()">Записатися на консультацію</button>
+                    <button class="btn btn-primary nav-cta" id="openBookingModal" data-i18n="hero.cta">Записатися на консультацію</button>
                     <div class="language-switcher">
                         <button class="lang-btn active" data-lang="uk">UA</button>
                         <button class="lang-btn" data-lang="en">ENG</button>
@@ -668,105 +481,225 @@
     </footer>
 
     <!-- Booking Modal -->
-    <div id="bookingModal" class="booking-modal">
+    <div id="bookingModal" class="booking-modal" style="display: none;">
+        <div class="booking-modal-overlay" id="bookingModalOverlay"></div>
         <div class="booking-modal-content">
-            <div class="booking-modal-header">
-                <h2>Записатися на консультацію</h2>
-                <button class="close-modal" onclick="closeBookingModal()">&times;</button>
-            </div>
-            
-            <!-- Services Selection -->
-            <div id="servicesSelection" class="booking-services">
-                <!-- Service 1: Individual Consultation -->
-                <div class="service-block">
-                    <div class="service-title">Індивідуальна психологічна консультація.</div>
-                    <div class="service-price">Вартість 2000 грн (50 USD).</div>
-                    <div class="service-description">онлайн консультація через ZOOM</div>
-                    <div class="service-meta">
-                        <div class="service-meta-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span>60m</span>
-                        </div>
-                        <div class="service-meta-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                            <span>Потрібне підтвердження</span>
-                        </div>
+            <button class="booking-modal-close" id="closeBookingModal">&times;</button>
+            <h2 class="booking-modal-title">Записатися на консультацію</h2>
+            <div class="booking-options">
+                <div class="booking-option-card">
+                    <h3>Індивідуальна психологічна консультація.</h3>
+                    <p class="booking-price">Вартість 2000 грн (50 USD).</p>
+                    <p class="booking-description">онлайн консультація через ZOOM</p>
+                    <div class="booking-badges">
+                        <span class="booking-badge">🕐 60m</span>
+                        <span class="booking-badge">📄 Потрібне підтвердження</span>
                     </div>
-                    <button class="service-select-btn" onclick="showCalendar('private-session')">Обрати час</button>
+                    <a href="booking-private-session.html" class="booking-select-btn">Обрати час</a>
                 </div>
-                
-                <!-- Service 2: Numerology Consultation -->
-                <div class="service-block">
-                    <div class="service-title">Нумерологічна консультація + діагностика та корекція через символізм.</div>
-                    <div class="service-price">Вартість - 6300 грн (150 USD)</div>
-                    <div class="service-description">Комплекс, який включає в себе повний нумерологічний розбір, короткий прогноз на рік та діагностику і корекцію через символізм.</div>
-                    <div class="service-meta">
-                        <div class="service-meta-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span>60m</span>
-                        </div>
-                        <div class="service-meta-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                            <span>Потрібне підтвердження</span>
-                        </div>
+                <div class="booking-option-card">
+                    <h3>Нумерологічна консультація + діагностика та корекція через символізм.</h3>
+                    <p class="booking-price">Вартість - 6300 грн (150 USD)</p>
+                    <p class="booking-description">Комплекс, який включає в себе повний нумерологічний розбір, короткий прогноз на рік та діагностику і корекцію через символізм.</p>
+                    <div class="booking-badges">
+                        <span class="booking-badge">🕐 60m</span>
+                        <span class="booking-badge">📄 Потрібне підтвердження</span>
                     </div>
-                    <button class="service-select-btn" onclick="showCalendar('numerology-and-symbolism')">Обрати час</button>
+                    <a href="booking-numerology.html" class="booking-select-btn">Обрати час</a>
                 </div>
-            </div>
-            
-            <!-- Calendar Container -->
-            <div id="calendarContainer" class="calendar-container">
-                <button class="calendar-back-btn" onclick="showServices()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M19 12H5M12 19l-7-7 7-7"/>
-                    </svg>
-                    Назад до вибору консультації
-                </button>
-                <div class="calendar-wrapper" id="calendarWrapper"></div>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
-    <script>
-        // Booking Modal Functions
-        function openBookingModal() {
-            document.getElementById('bookingModal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-            showServices();
+    <style>
+        .booking-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        
-        function closeBookingModal() {
-            document.getElementById('bookingModal').classList.remove('active');
-            document.body.style.overflow = 'auto';
-            showServices();
+
+        .booking-modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
         }
-        
-        function showServices() {
-            document.getElementById('servicesSelection').style.display = 'block';
-            document.getElementById('calendarContainer').classList.remove('active');
-            document.getElementById('calendarWrapper').innerHTML = '';
+
+        .booking-modal-content {
+            position: relative;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            max-width: 700px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            z-index: 10001;
         }
-        
-        function showCalendar(serviceType) {
-            window.location.href = 'booking.html?type=' + serviceType;
+
+        .booking-modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: var(--text-light);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
         }
-        
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('bookingModal');
-            if (event.target === modal) {
-                closeBookingModal();
+
+        .booking-modal-close:hover {
+            background: #f5f5f5;
+            color: var(--text-dark);
+        }
+
+        .booking-modal-title {
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .booking-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .booking-option-card {
+            background: var(--white);
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .booking-option-card h3 {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .booking-price {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .booking-description {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .booking-badges {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .booking-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #f5f5f5;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .booking-select-btn {
+            display: block;
+            width: 100%;
+            padding: 12px 24px;
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .booking-select-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .booking-modal-content {
+                padding: 1.5rem;
+                width: 95%;
+            }
+
+            .booking-modal-title {
+                font-size: 1.5rem;
+            }
+
+            .booking-option-card {
+                padding: 1rem;
             }
         }
+    </style>
+
+    <script>
+        // Booking Modal functionality
+        const openModalBtn = document.getElementById('openBookingModal');
+        const closeModalBtn = document.getElementById('closeBookingModal');
+        const modal = document.getElementById('bookingModal');
+        const modalOverlay = document.getElementById('bookingModalOverlay');
+
+        if (openModalBtn) {
+            openModalBtn.addEventListener('click', function() {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', closeModal);
+        }
+
+        if (modalOverlay) {
+            modalOverlay.addEventListener('click', closeModal);
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                closeModal();
+            }
+        });
     </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
