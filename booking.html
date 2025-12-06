@@ -95,47 +95,15 @@
             <a href="index.html" class="back-link">← Назад на головну</a>
             
             <div class="booking-header">
-                <h1>Записатися на консультацію</h1>
-                <p>Оберіть тип консультації та зручний для вас час</p>
+                <h1 id="bookingTitle">Записатися на консультацію</h1>
+                <p>Оберіть зручний для вас час</p>
             </div>
 
-            <!-- First Consultation Type -->
+            <!-- Calendar Section -->
             <div class="calendar-section">
-                <h2>Індивідуальна психологічна консультація</h2>
-                <div class="calendar-wrapper">
-                    <!-- Cal inline embed code begins -->
-                    <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-private-session"></div>
-                    <script type="text/javascript">
-                      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-                      Cal("init", "private-session", {origin:"https://app.cal.com"});
-                      Cal.ns["private-session"]("inline", {
-                        elementOrSelector:"#my-cal-inline-private-session",
-                        config: {"layout":"month_view"},
-                        calLink: "psy-valentyna-balatska/private-session",
-                      });
-                      Cal.ns["private-session"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-                    </script>
-                    <!-- Cal inline embed code ends -->
-                </div>
-            </div>
-
-            <!-- Second Consultation Type -->
-            <div class="calendar-section">
-                <h2>Нумерологічна консультація + діагностика та корекція через символізм</h2>
-                <div class="calendar-wrapper">
-                    <!-- Cal inline embed code begins -->
-                    <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-numerology-and-symbolism"></div>
-                    <script type="text/javascript">
-                      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-                      Cal("init", "numerology-and-symbolism", {origin:"https://app.cal.com"});
-                      Cal.ns["numerology-and-symbolism"]("inline", {
-                        elementOrSelector:"#my-cal-inline-numerology-and-symbolism",
-                        config: {"layout":"month_view"},
-                        calLink: "psy-valentyna-balatska/numerology-and-symbolism",
-                      });
-                      Cal.ns["numerology-and-symbolism"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-                    </script>
-                    <!-- Cal inline embed code ends -->
+                <h2 id="calendarTitle"></h2>
+                <div class="calendar-wrapper" id="calendar-wrapper">
+                    <!-- Calendar will be inserted here -->
                 </div>
             </div>
         </div>
@@ -149,6 +117,74 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Get service type from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const serviceType = urlParams.get('type');
+        
+        const calendarWrapper = document.getElementById('calendar-wrapper');
+        let title, calId, namespace, calLink;
+        
+        if (serviceType === 'private-session') {
+            title = 'Індивідуальна психологічна консультація';
+            calId = 'my-cal-inline-private-session';
+            namespace = 'private-session';
+            calLink = 'psy-valentyna-balatska/private-session';
+        } else if (serviceType === 'numerology-and-symbolism') {
+            title = 'Нумерологічна консультація + діагностика та корекція через символізм';
+            calId = 'my-cal-inline-numerology-and-symbolism';
+            namespace = 'numerology-and-symbolism';
+            calLink = 'psy-valentyna-balatska/numerology-and-symbolism';
+        } else {
+            // Default: redirect to home
+            window.location.href = 'index.html';
+            return;
+        }
+        
+        // Set title
+        document.getElementById('calendarTitle').textContent = title;
+        
+        // Insert calendar div
+        calendarWrapper.innerHTML = '<div style="width:100%;height:100%;overflow:scroll" id="' + calId + '"></div>';
+        
+        // Load and execute Cal.com script exactly as provided
+        (function (C, A, L) { 
+            let p = function (a, ar) { a.q.push(ar); }; 
+            let d = C.document; 
+            C.Cal = C.Cal || function () { 
+                let cal = C.Cal; 
+                let ar = arguments; 
+                if (!cal.loaded) { 
+                    cal.ns = {}; 
+                    cal.q = cal.q || []; 
+                    d.head.appendChild(d.createElement("script")).src = A; 
+                    cal.loaded = true; 
+                } 
+                if (ar[0] === L) { 
+                    const api = function () { p(api, arguments); }; 
+                    const namespace = ar[1]; 
+                    api.q = api.q || []; 
+                    if(typeof namespace === "string"){
+                        cal.ns[namespace] = cal.ns[namespace] || api;
+                        p(cal.ns[namespace], ar);
+                        p(cal, ["initNamespace", namespace]);
+                    } else p(cal, ar); 
+                    return;
+                } 
+                p(cal, ar); 
+            }; 
+        })(window, "https://app.cal.com/embed/embed.js", "init");
+        
+        Cal("init", namespace, {origin:"https://app.cal.com"});
+        
+        Cal.ns[namespace]("inline", {
+            elementOrSelector: "#" + calId,
+            config: {"layout":"month_view"},
+            calLink: calLink,
+        });
+        
+        Cal.ns[namespace]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
 </body>
 </html>
 
