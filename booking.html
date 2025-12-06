@@ -3,67 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>Записатися на консультацію - Валентина Балацька | Психолог Онлайн</title>
-    <meta name="description" content="Запишіться на консультацію до психолога Валентини Балацької. Індивідуальна психологічна консультація та нумерологічна консультація онлайн.">
-    
-    <!-- Stylesheets -->
+    <title>Записатися на консультацію - Валентина Балацька</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        .booking-page {
-            padding-top: 120px;
-            min-height: 100vh;
-        }
-        .booking-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        .booking-header h1 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        .booking-header p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-        }
-        .calendar-section {
-            margin-bottom: 4rem;
-        }
-        .calendar-section h2 {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        .calendar-wrapper {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            min-height: 600px;
-        }
-        .calendar-wrapper > div {
-            min-height: 600px;
-        }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        .back-link:hover {
-            color: var(--primary-dark);
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -72,39 +16,50 @@
             <div class="nav-content">
                 <div class="nav-name-block">
                     <a href="index.html" style="text-decoration: none; color: inherit;">
-                        <div class="logo" data-i18n="hero.name">ВАЛЕНТИНА БАЛАЦЬКА</div>
-                        <div class="nav-subtitle" data-i18n="nav.subtitle1">ПРАКТИЧНИЙ ПСИХОЛОГ</div>
-                        <div class="nav-subtitle" data-i18n="nav.subtitle2">СПЕЦІАЛІСТ З НУМЕРОЛОГІЇ та СИМВОЛІЗМУ</div>
+                        <div class="logo">ВАЛЕНТИНА БАЛАЦЬКА</div>
+                        <div class="nav-subtitle">ПРАКТИЧНИЙ ПСИХОЛОГ</div>
+                        <div class="nav-subtitle">СПЕЦІАЛІСТ З НУМЕРОЛОГІЇ та СИМВОЛІЗМУ</div>
                     </a>
-                </div>
-                <div class="nav-actions">
-                    <a href="index.html#contact" class="btn btn-primary nav-cta">Контакти</a>
-                    <div class="language-switcher">
-                        <button class="lang-btn active" data-lang="uk">UA</button>
-                        <button class="lang-btn" data-lang="en">ENG</button>
-                        <button class="lang-btn" data-lang="ru">RUS</button>
-                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Booking Page Content -->
-    <section class="booking-page section">
+    <!-- Booking Selection Section -->
+    <section class="section" style="padding-top: 150px;">
         <div class="container">
-            <a href="index.html" class="back-link">← Назад на головну</a>
-            
-            <div class="booking-header">
-                <h1 id="bookingTitle">Записатися на консультацію</h1>
-                <p>Оберіть зручний для вас час</p>
-            </div>
-
-            <!-- Calendar Section -->
-            <div class="calendar-section">
-                <h2 id="calendarTitle"></h2>
-                <div class="calendar-wrapper" id="calendar-wrapper">
-                    <!-- Calendar will be inserted here -->
-                </div>
+            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Оберіть тип консультації</h2>
+            <div class="services-grid" style="max-width: 800px; margin: 0 auto;">
+                <a href="booking-private-session.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-card" style="cursor: pointer;">
+                        <h3>Індивідуальна психологічна консультація.</h3>
+                        <p class="service-price">Вартість 2000 грн (50 USD).</p>
+                        <p style="margin-bottom: 1rem;">онлайн консультація через ZOOM</p>
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                            <span style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: #f5f5f5; border-radius: 20px; font-size: 0.9rem; color: var(--text-light);">
+                                <span>🕐</span> 60m
+                            </span>
+                            <span style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: #f5f5f5; border-radius: 20px; font-size: 0.9rem; color: var(--text-light);">
+                                <span>📄</span> Потрібне підтвердження
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="booking-numerology.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-card" style="cursor: pointer;">
+                        <h3>Нумерологічна консультація + діагностика та корекція через символізм.</h3>
+                        <p class="service-price">Вартість - 6300 грн (150 USD)</p>
+                        <p style="margin-bottom: 1rem;">Комплекс, який включає в себе повний нумерологічний розбір, короткий прогноз на рік та діагностику і корекцію через символізм.</p>
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                            <span style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: #f5f5f5; border-radius: 20px; font-size: 0.9rem; color: var(--text-light);">
+                                <span>🕐</span> 60m
+                            </span>
+                            <span style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: #f5f5f5; border-radius: 20px; font-size: 0.9rem; color: var(--text-light);">
+                                <span>📄</span> Потрібне підтвердження
+                            </span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -115,100 +70,6 @@
             <p>&copy; 2024 Валентина Балацька. Всі права захищені.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
-    <script>
-        // Get service type from URL parameter
-        const urlParams = new URLSearchParams(window.location.search);
-        const serviceType = urlParams.get('type');
-        
-        const calendarWrapper = document.getElementById('calendar-wrapper');
-        let title, calId, namespace, calLink;
-        
-        if (serviceType === 'private-session') {
-            title = 'Індивідуальна психологічна консультація';
-            calId = 'my-cal-inline-private-session';
-            namespace = 'private-session';
-            calLink = 'psy-valentyna-balatska/private-session';
-        } else if (serviceType === 'numerology-and-symbolism') {
-            title = 'Нумерологічна консультація + діагностика та корекція через символізм';
-            calId = 'my-cal-inline-numerology-and-symbolism';
-            namespace = 'numerology-and-symbolism';
-            calLink = 'psy-valentyna-balatska/numerology-and-symbolism';
-        } else {
-            // Default: redirect to home
-            window.location.href = 'index.html';
-            return;
-        }
-        
-        // Set title
-        document.getElementById('calendarTitle').textContent = title;
-        
-        // Insert calendar div
-        calendarWrapper.innerHTML = '<div style="width:100%;height:100%;overflow:scroll" id="' + calId + '"></div>';
-        
-        // Initialize Cal.com - wait for script to load
-        (function (C, A, L) { 
-            let p = function (a, ar) { a.q.push(ar); }; 
-            let d = C.document; 
-            C.Cal = C.Cal || function () { 
-                let cal = C.Cal; 
-                let ar = arguments; 
-                if (!cal.loaded) { 
-                    cal.ns = {}; 
-                    cal.q = cal.q || []; 
-                    const script = d.createElement("script");
-                    script.src = A;
-                    script.async = true;
-                    script.onload = function() {
-                        // Wait a bit for script to fully initialize
-                        setTimeout(function() {
-                            if (typeof Cal !== 'undefined') {
-                                Cal("init", namespace, {origin:"https://app.cal.com"});
-                                
-                                Cal.ns[namespace]("inline", {
-                                    elementOrSelector: "#" + calId,
-                                    config: {"layout":"month_view"},
-                                    calLink: calLink,
-                                });
-                                
-                                Cal.ns[namespace]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-                            }
-                        }, 500);
-                    };
-                    d.head.appendChild(script);
-                    cal.loaded = true; 
-                } else {
-                    // Script already loaded
-                    setTimeout(function() {
-                        if (typeof Cal !== 'undefined') {
-                            Cal("init", namespace, {origin:"https://app.cal.com"});
-                            
-                            Cal.ns[namespace]("inline", {
-                                elementOrSelector: "#" + calId,
-                                config: {"layout":"month_view"},
-                                calLink: calLink,
-                            });
-                            
-                            Cal.ns[namespace]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-                        }
-                    }, 200);
-                }
-                if (ar[0] === L) { 
-                    const api = function () { p(api, arguments); }; 
-                    const namespace = ar[1]; 
-                    api.q = api.q || []; 
-                    if(typeof namespace === "string"){
-                        cal.ns[namespace] = cal.ns[namespace] || api;
-                        p(cal.ns[namespace], ar);
-                        p(cal, ["initNamespace", namespace]);
-                    } else p(cal, ar); 
-                    return;
-                } 
-                p(cal, ar); 
-            }; 
-        })(window, "https://app.cal.com/embed/embed.js", "init");
-    </script>
 </body>
 </html>
 
