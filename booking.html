@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Записатися на консультацію - Валентина Балацька | Психолог Онлайн</title>
+    <meta name="description" content="Запишіться на консультацію до психолога Валентини Балацької. Індивідуальна психологічна консультація та нумерологічна консультація онлайн.">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .booking-page {
+            padding-top: 120px;
+            min-height: 100vh;
+        }
+        .booking-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .booking-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .booking-header p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+        .calendar-section {
+            margin-bottom: 4rem;
+        }
+        .calendar-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .calendar-wrapper {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            min-height: 600px;
+        }
+        .calendar-wrapper > div {
+            min-height: 600px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-name-block">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <div class="logo" data-i18n="hero.name">ВАЛЕНТИНА БАЛАЦЬКА</div>
+                        <div class="nav-subtitle" data-i18n="nav.subtitle1">ПРАКТИЧНИЙ ПСИХОЛОГ</div>
+                        <div class="nav-subtitle" data-i18n="nav.subtitle2">СПЕЦІАЛІСТ З НУМЕРОЛОГІЇ та СИМВОЛІЗМУ</div>
+                    </a>
+                </div>
+                <div class="nav-actions">
+                    <a href="index.html#contact" class="btn btn-primary nav-cta">Контакти</a>
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="uk">UA</button>
+                        <button class="lang-btn" data-lang="en">ENG</button>
+                        <button class="lang-btn" data-lang="ru">RUS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Page Content -->
+    <section class="booking-page section">
+        <div class="container">
+            <a href="index.html" class="back-link">← Назад на головну</a>
+            
+            <div class="booking-header">
+                <h1>Записатися на консультацію</h1>
+                <p>Оберіть тип консультації та зручний для вас час</p>
+            </div>
+
+            <!-- First Consultation Type -->
+            <div class="calendar-section">
+                <h2>Індивідуальна психологічна консультація</h2>
+                <div class="calendar-wrapper">
+                    <!-- Cal inline embed code begins -->
+                    <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-private-session"></div>
+                    <script type="text/javascript">
+                      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                      Cal("init", "private-session", {origin:"https://app.cal.com"});
+                      Cal.ns["private-session"]("inline", {
+                        elementOrSelector:"#my-cal-inline-private-session",
+                        config: {"layout":"month_view"},
+                        calLink: "psy-valentyna-balatska/private-session",
+                      });
+                      Cal.ns["private-session"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+                    </script>
+                    <!-- Cal inline embed code ends -->
+                </div>
+            </div>
+
+            <!-- Second Consultation Type -->
+            <div class="calendar-section">
+                <h2>Нумерологічна консультація + діагностика та корекція через символізм</h2>
+                <div class="calendar-wrapper">
+                    <!-- Cal inline embed code begins -->
+                    <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-numerology-and-symbolism"></div>
+                    <script type="text/javascript">
+                      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                      Cal("init", "numerology-and-symbolism", {origin:"https://app.cal.com"});
+                      Cal.ns["numerology-and-symbolism"]("inline", {
+                        elementOrSelector:"#my-cal-inline-numerology-and-symbolism",
+                        config: {"layout":"month_view"},
+                        calLink: "psy-valentyna-balatska/numerology-and-symbolism",
+                      });
+                      Cal.ns["numerology-and-symbolism"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+                    </script>
+                    <!-- Cal inline embed code ends -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Валентина Балацька. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
