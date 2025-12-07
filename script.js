@@ -87,7 +87,19 @@ const translations = {
         'form.submit': 'Відправити повідомлення',
         
         // Footer
-        'footer.text': '© 2024 Валентина Балацька. Всі права захищені.'
+        'footer.text': '© 2024 Валентина Балацька. Всі права захищені.',
+        
+        // Booking Modal
+        'booking.modal.title': 'Записатися на консультацію',
+        'booking.consultation1.title': 'Індивідуальна психологічна консультація.',
+        'booking.consultation1.price': 'Вартість 2000 грн (50 USD).',
+        'booking.consultation1.desc': 'онлайн консультація через ZOOM',
+        'booking.duration': '60m',
+        'booking.confirmation': 'Потрібне підтвердження',
+        'booking.selectTime': 'Обрати час',
+        'booking.consultation2.title': 'Нумерологічна консультація + діагностика та корекція через символізм.',
+        'booking.consultation2.price': 'Вартість 6300 грн (150 USD)',
+        'booking.consultation2.desc': 'Комплекс, який включає в себе повний нумерологічний розбір, короткий прогноз на рік та діагностику і корекцію через символізм.'
     },
     
     en: {
@@ -177,7 +189,19 @@ const translations = {
         'form.submit': 'Send message',
         
         // Footer
-        'footer.text': '© 2024 Valentyna Balatska. All rights reserved.'
+        'footer.text': '© 2024 Valentyna Balatska. All rights reserved.',
+        
+        // Booking Modal
+        'booking.modal.title': 'Book a Consultation',
+        'booking.consultation1.title': 'Private Coaching Session.',
+        'booking.consultation1.price': 'Cost 50 USD.',
+        'booking.consultation1.desc': 'online session via ZOOM',
+        'booking.duration': '60m',
+        'booking.confirmation': 'Confirmation required',
+        'booking.selectTime': 'Select time',
+        'booking.consultation2.title': 'Numerology & Symbolism Audit and Realignment.',
+        'booking.consultation2.price': 'Cost 150 USD',
+        'booking.consultation2.desc': 'A comprehensive written report that includes a full numerological profile, a strategic outlook for the year ahead, and symbolic tools for harmonizing your current state.'
     },
     
     ru: {
@@ -267,7 +291,19 @@ const translations = {
         'form.submit': 'Отправить сообщение',
         
         // Footer
-        'footer.text': '© 2024 Валентина Балацкая. Все права защищены.'
+        'footer.text': '© 2024 Валентина Балацкая. Все права защищены.',
+        
+        // Booking Modal
+        'booking.modal.title': 'Записаться на консультацию',
+        'booking.consultation1.title': 'Индивидуальная психологическая консультация.',
+        'booking.consultation1.price': 'Стоимость 2000 грн (50 долл США).',
+        'booking.consultation1.desc': 'онлайн консультация через ZOOM',
+        'booking.duration': '60m',
+        'booking.confirmation': 'Требуется подтверждение',
+        'booking.selectTime': 'Выбрать время',
+        'booking.consultation2.title': 'Нумерологическая консультация + диагностика и коррекция через символизм.',
+        'booking.consultation2.price': 'Стоимость 6300 грн (150 долл США)',
+        'booking.consultation2.desc': 'Комплекс, который включает в себя полный нумерологический разбор, краткий прогноз на год и диагностику и коррекцию через символизм.'
     }
 };
 
