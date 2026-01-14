@@ -8,15 +8,51 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
             color: #333;
+            background-color: #f5f5f5;
+        }
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 0.5rem;
+        }
+        .lang-btn {
+            padding: 8px 16px;
+            border: none;
+            background: #fff;
+            color: #333;
+            cursor: pointer;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .lang-btn:hover {
+            background: #3D4A2A;
+            color: #fff;
+        }
+        .lang-btn.active {
+            background: #3D4A2A;
+            color: #fff;
+        }
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 60px;
         }
         h1 {
             color: #2c3e50;
             border-bottom: 3px solid #3498db;
             padding-bottom: 10px;
+            margin-top: 0;
         }
         h2 {
             color: #34495e;
@@ -28,147 +64,260 @@
             background: #f8f9fa;
             border-radius: 8px;
         }
-        .highlight {
-            background: #fff3cd;
-            padding: 15px;
-            border-left: 4px solid #ffc107;
-            margin: 20px 0;
-        }
         ul {
             padding-left: 20px;
         }
-        .contact {
-            background: #e7f3ff;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 20px;
+        li {
+            margin: 10px 0;
         }
         .last-updated {
             color: #666;
             font-size: 0.9em;
             font-style: italic;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .language-switcher {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin-bottom: 20px;
+                justify-content: center;
+            }
+            .container {
+                padding: 20px;
+                margin-top: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p class="last-updated">Last Updated: January 2025</p>
-
-    <div class="section">
-        <h2>1. Introduction</h2>
-        <p><strong>NUM CALENDAR</strong> ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="uk">UA</button>
+        <button class="lang-btn" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="es">ES</button>
     </div>
 
-    <div class="section">
-        <h2>2. Information We Collect</h2>
-        <p><strong>NUM CALENDAR</strong> is designed to work completely offline. We collect minimal information that is stored locally on your device:</p>
-        
-        <h3>2.1 User Preferences (Stored Locally Only)</h3>
-        <ul>
-            <li><strong>Birth date</strong> (day, month, year) - used only for numerology calculations</li>
-            <li><strong>Selected target month and year</strong> - for calendar display</li>
-            <li><strong>Language preference</strong> (English, Russian, Ukrainian, Spanish)</li>
-        </ul>
+    <div class="container">
+        <h1 data-i18n="privacy.title">PRIVACY POLICY</h1>
+        <p class="last-updated" data-i18n="privacy.lastUpdated">Last updated: January 2026</p>
 
-        <div class="highlight">
-            <h3>2.2 No Data Collection</h3>
-            <p>We do <strong>NOT</strong> collect:</p>
+    <div class="section">
+            <h2 data-i18n="privacy.section1.title">1. Introduction</h2>
+            <p data-i18n="privacy.section1.text"></p>
+        </div>
+
+        <div class="section">
+            <h2 data-i18n="privacy.section2.title">2. Data Collection, Storage & iCloud</h2>
+            <p data-i18n="privacy.section2.intro"></p>
             <ul>
-                <li>Personal information</li>
-                <li>Usage analytics</li>
-                <li>Activity tracking data</li>
-                <li>Device information</li>
-                <li>Location data</li>
-                <li>Contact information</li>
-                <li>Any data from other apps</li>
+                <li data-i18n="privacy.section2.item1"></li>
+                <li data-i18n="privacy.section2.item2"></li>
+                <li data-i18n="privacy.section2.item3"></li>
             </ul>
-        </div>
     </div>
 
     <div class="section">
-        <h2>3. How We Use Your Information</h2>
-        <p>All data you enter is stored locally on your device using iOS UserDefaults. This information is used solely to:</p>
-        <ul>
-            <li>Calculate numerology readings based on your birth date</li>
-            <li>Display the calendar for your selected month and year</li>
-            <li>Remember your language preference</li>
-        </ul>
-
-        <div class="highlight">
-            <p><strong>We do NOT:</strong></p>
+            <h2 data-i18n="privacy.section3.title">3. Data Export & Sharing</h2>
+            <p data-i18n="privacy.section3.intro"></p>
             <ul>
-                <li>Transmit any data over the internet</li>
-                <li>Share data with third parties</li>
-                <li>Use data for advertising</li>
-                <li>Sell data to anyone</li>
-                <li>Access data from other apps</li>
+                <li data-i18n="privacy.section3.item1"></li>
+                <li data-i18n="privacy.section3.item2"></li>
+                <li data-i18n="privacy.section3.item3"></li>
             </ul>
+    </div>
+
+    <div class="section">
+            <h2 data-i18n="privacy.section4.title">4. Data Retention (Important)</h2>
+            <p data-i18n="privacy.section4.intro"></p>
+            <ul>
+                <li data-i18n="privacy.section4.item1"></li>
+                <li data-i18n="privacy.section4.item2"></li>
+            </ul>
+    </div>
+
+    <div class="section">
+            <h2 data-i18n="privacy.section5.title">5. Data Security</h2>
+            <p data-i18n="privacy.section5.text"></p>
+    </div>
+
+    <div class="section">
+            <h2 data-i18n="privacy.section6.title">6. Children's Privacy</h2>
+            <p data-i18n="privacy.section6.text"></p>
+    </div>
+
+    <div class="section">
+            <h2 data-i18n="privacy.section7.title">7. Changes to This Policy</h2>
+            <p data-i18n="privacy.section7.text"></p>
+    </div>
+
+    <div class="section">
+            <h2 data-i18n="privacy.section8.title">8. Contact Us</h2>
+            <p data-i18n="privacy.section8.text"></p>
         </div>
     </div>
 
-    <div class="section">
-        <h2>4. Data Storage</h2>
-        <p>All data is stored locally on your iOS device. We do not have access to this data, and it is never transmitted to our servers or any third-party services.</p>
-    </div>
+    <script>
+        // Translation data for Privacy Policy
+        const privacyTranslations = {
+            en: {
+                'privacy.title': 'PRIVACY POLICY',
+                'privacy.lastUpdated': 'Last updated: January 2026',
+                'privacy.section1.title': '1. Introduction',
+                'privacy.section1.text': 'This Privacy Policy describes how we handle your personal information when you use this application. We are committed to protecting your privacy by design: we do not collect, transmit, or store your personal data on our servers.',
+                'privacy.section2.title': '2. Data Collection, Storage & iCloud',
+                'privacy.section2.intro': 'This Application operates on a "Local Storage" model.',
+                'privacy.section2.item1': 'All data, including your birth date, journal entries, and emotional tracking, is stored locally on your device.',
+                'privacy.section2.item2': 'We (the developers) have no access to your data.',
+                'privacy.section2.item3': 'iCloud Backup: If you have iCloud Backup enabled on your device, your data may be automatically stored in your personal iCloud account. This process is managed securely by Apple and controlled entirely by your device settings. Aside from your personal iCloud backups, your data is never transmitted to any external servers.',
+                'privacy.section3.title': '3. Data Export & Sharing',
+                'privacy.section3.intro': 'You have the option to export your CBT journal entries (individually or for a period of up to 10 days) as PDF files.',
+                'privacy.section3.item1': 'Once exported, these files are stored outside the Application (e.g., in your Files app or sent via email).',
+                'privacy.section3.item2': 'You are solely responsible for the security and storage of these exported PDF files.',
+                'privacy.section3.item3': 'We cannot access or protect your data once it leaves the Application.',
+                'privacy.section4.title': '4. Data Retention (Important)',
+                'privacy.section4.intro': 'To maximize privacy and encourage mindfulness in the present moment, the Application automatically deletes journal entries older than 10 days.',
+                'privacy.section4.item1': 'This process is irreversible.',
+                'privacy.section4.item2': 'If you wish to keep your entries for a longer period, you must export them as PDF files before the 10-day period expires.',
+                'privacy.section5.title': '5. Data Security',
+                'privacy.section5.text': 'Since data is stored on your device, its security depends on your device\'s security. We recommend keeping your device protected with a Passcode, Face ID, or Touch ID.',
+                'privacy.section6.title': '6. Children\'s Privacy',
+                'privacy.section6.text': 'This Application is not intended for children under 13 years of age. We do not knowingly collect personal information from children.',
+                'privacy.section7.title': '7. Changes to This Policy',
+                'privacy.section7.text': 'We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Last Updated" date in the Application settings.',
+                'privacy.section8.title': '8. Contact Us',
+                'privacy.section8.text': 'If you have questions about this Privacy Policy, please contact us through the App Store support page.'
+            },
+            uk: {
+                'privacy.title': 'ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ',
+                'privacy.lastUpdated': 'Останнє оновлення: Січень 2026',
+                'privacy.section1.title': '1. Вступ',
+                'privacy.section1.text': 'Ця Політика конфіденційності описує, як ми обробляємо вашу особисту інформацію під час використання цього додатка. Ми дбаємо про вашу приватність: ми не збираємо, не передаємо і не зберігаємо ваші особисті дані на наших серверах.',
+                'privacy.section2.title': '2. Збір, зберігання даних та iCloud',
+                'privacy.section2.intro': 'Цей Додаток працює за моделлю «Локальне зберігання».',
+                'privacy.section2.item1': 'Всі дані, включаючи дату народження, записи щоденника та трекінг емоцій, зберігаються локально на вашому пристрої.',
+                'privacy.section2.item2': 'Ми (розробники) не маємо доступу до ваших даних.',
+                'privacy.section2.item3': 'Резервне копіювання iCloud: Якщо на вашому пристрої увімкнено резервне копіювання iCloud, ваші дані можуть автоматично зберігатися у вашому особистому обліковому записі iCloud. Цей процес керується компанією Apple і контролюється виключно налаштуваннями вашого пристрою. Окрім ваших особистих резервних копій iCloud, ваші дані ніколи не передаються на зовнішні сервери.',
+                'privacy.section3.title': '3. Експорт та обмін даними',
+                'privacy.section3.intro': 'Ви маєте можливість експортувати записи КПТ-щоденника (окремо або за період до 10 днів) у вигляді PDF-файлів.',
+                'privacy.section3.item1': 'Після експорту ці файли зберігаються поза межами Додатка.',
+                'privacy.section3.item2': 'Ви несете повну відповідальність за безпеку та зберігання цих експортованих PDF-файлів.',
+                'privacy.section3.item3': 'Ми не маємо доступу до цих файлів і не можемо захистити їх після того, як вони залишають Додаток.',
+                'privacy.section4.title': '4. Зберігання даних (Важливо)',
+                'privacy.section4.intro': 'З метою конфіденційності Додаток автоматично видаляє записи щоденника, старші за 10 днів.',
+                'privacy.section4.item1': 'Цей процес є незворотнім.',
+                'privacy.section4.item2': 'Якщо ви хочете зберегти свої записи на довший термін, ви повинні експортувати їх у PDF до закінчення 10-денного терміну.',
+                'privacy.section5.title': '5. Безпека даних',
+                'privacy.section5.text': 'Оскільки дані зберігаються на вашому пристрої, їх безпека залежить від захисту вашого пристрою. Ми рекомендуємо використовувати пароль, Face ID або Touch ID для захисту доступу до телефону.',
+                'privacy.section6.title': '6. Конфіденційність дітей',
+                'privacy.section6.text': 'Цей Додаток не призначений для дітей віком до 13 років. Ми свідомо не збираємо інформацію від дітей.',
+                'privacy.section7.title': '7. Зміни до цієї Політики',
+                'privacy.section7.text': 'Ми можемо час від часу оновлювати цю Політику. Ми повідомимо про зміни, оновивши дату «Останнє оновлення» в налаштуваннях Додатка.',
+                'privacy.section8.title': '8. Контакти',
+                'privacy.section8.text': 'Якщо у вас є питання щодо цієї Політики, зв\'яжіться з нами через сторінку підтримки в App Store.'
+            },
+            ru: {
+                'privacy.title': 'ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ',
+                'privacy.lastUpdated': 'Последнее обновление: Январь 2026',
+                'privacy.section1.title': '1. Введение',
+                'privacy.section1.text': 'Эта Политика конфиденциальности описывает, как мы обрабатываем вашу личную информацию при использовании приложения. Мы не собираем, не передаем и не храним ваши личные данные на наших серверах.',
+                'privacy.section2.title': '2. Сбор, хранение данных и iCloud',
+                'privacy.section2.intro': 'Приложение работает по модели «Локальное хранение».',
+                'privacy.section2.item1': 'Все данные, включая дату рождения, записи дневника и трекинг эмоций, хранятся локально на вашем устройстве.',
+                'privacy.section2.item2': 'Мы (разработчики) не имеем доступа к вашим данным.',
+                'privacy.section2.item3': 'Резервное копирование iCloud: Если на вашем устройстве включено резервное копирование iCloud, ваши данные могут автоматически сохраняться в вашей личной учетной записи iCloud. Этот процесс управляется компанией Apple и контролируется исключительно настройками вашего устройства. За исключением ваших личных резервных копий, данные никогда не передаются на внешние серверы.',
+                'privacy.section3.title': '3. Экспорт и обмен данными',
+                'privacy.section3.intro': 'У вас есть возможность экспортировать записи КПТ-дневника (отдельно или за период до 10 дней) в виде PDF-файлов.',
+                'privacy.section3.item1': 'После экспорта эти файлы хранятся за пределами Приложения.',
+                'privacy.section3.item2': 'Вы несете полную ответственность за безопасность и хранение этих экспортированных PDF-файлов.',
+                'privacy.section3.item3': 'Мы не имеем доступа к этим файлам и не можем защитить их после того, как они покидают Приложение.',
+                'privacy.section4.title': '4. Хранение данных (Важно)',
+                'privacy.section4.intro': 'В целях конфиденциальности Приложение автоматически удаляет записи дневника старше 10 дней.',
+                'privacy.section4.item1': 'Этот процесс необратим.',
+                'privacy.section4.item2': 'Если вы хотите сохранить свои записи на более длительный срок, вы должны экспортировать их в PDF до истечения 10-дневного срока.',
+                'privacy.section5.title': '5. Безопасность данных',
+                'privacy.section5.text': 'Поскольку данные хранятся на вашем устройстве, их безопасность зависит от защиты вашего устройства. Мы рекомендуем использовать пароль, Face ID или Touch ID.',
+                'privacy.section6.title': '6. Конфиденциальность детей',
+                'privacy.section6.text': 'Приложение не предназначено для детей младше 13 лет. Мы сознательно не собираем информацию от детей.',
+                'privacy.section7.title': '7. Изменения в Политике',
+                'privacy.section7.text': 'Мы можем обновлять эту Политику. Мы уведомим об изменениях, обновив дату «Последнее обновление» в настройках.',
+                'privacy.section8.title': '8. Контакты',
+                'privacy.section8.text': 'Если у вас есть вопросы, свяжитесь с нами через страницу поддержки в App Store.'
+            },
+            es: {
+                'privacy.title': 'POLÍTICA DE PRIVACIDAD',
+                'privacy.lastUpdated': 'Última actualización: Enero 2026',
+                'privacy.section1.title': '1. Introducción',
+                'privacy.section1.text': 'Esta Política de Privacidad describe cómo manejamos su información personal. Nos comprometemos a proteger su privacidad: no recopilamos, transmitimos ni almacenamos sus datos personales en nuestros servidores.',
+                'privacy.section2.title': '2. Recopilación, Almacenamiento y iCloud',
+                'privacy.section2.intro': 'Esta Aplicación opera bajo un modelo de "Almacenamiento Local".',
+                'privacy.section2.item1': 'Todos los datos, incluida su fecha de nacimiento, entradas del diario y seguimiento emocional, se almacenan localmente en su dispositivo.',
+                'privacy.section2.item2': 'Nosotros (los desarrolladores) no tenemos acceso a sus datos.',
+                'privacy.section2.item3': 'Copia de seguridad en iCloud: Si tiene activada la copia de seguridad en iCloud en su dispositivo, sus datos pueden almacenarse automáticamente en su cuenta personal de iCloud. Este proceso es gestionado por Apple y controlado exclusivamente por la configuración de su dispositivo. Aparte de sus copias de seguridad personales, sus datos nunca se transmiten a servidores externos.',
+                'privacy.section3.title': '3. Exportación y Compartición de Datos',
+                'privacy.section3.intro': 'Tiene la opción de exportar las entradas de su diario CBT (individualmente o por un período de hasta 10 días) como archivos PDF.',
+                'privacy.section3.item1': 'Una vez exportados, estos archivos se almacenan fuera de la Aplicación.',
+                'privacy.section3.item2': 'Usted es el único responsable de la seguridad y el almacenamiento de estos archivos PDF exportados.',
+                'privacy.section3.item3': 'No podemos proteger sus datos una vez que salen de la Aplicación.',
+                'privacy.section4.title': '4. Retención de Datos (Importante)',
+                'privacy.section4.intro': 'Para maximizar la privacidad, la Aplicación elimina automáticamente las entradas del diario con más de 10 días de antigüedad.',
+                'privacy.section4.item1': 'Este proceso es irreversible.',
+                'privacy.section4.item2': 'Si desea conservar sus entradas por un período más largo, debe exportarlas como archivos PDF antes de que expire el período de 10 días.',
+                'privacy.section5.title': '5. Seguridad de los Datos',
+                'privacy.section5.text': 'Dado que los datos se almacenan en su dispositivo, su seguridad depende de su dispositivo. Recomendamos proteger su dispositivo con contraseña, Face ID o Touch ID.',
+                'privacy.section6.title': '6. Privacidad de los Niños',
+                'privacy.section6.text': 'Esta Aplicación no está destinada a niños menores de 13 años.',
+                'privacy.section7.title': '7. Cambios en esta Política',
+                'privacy.section7.text': 'Podemos actualizar esta Política de vez en cuando. Le notificaremos actualizando la fecha de "Última actualización".',
+                'privacy.section8.title': '8. Contacto',
+                'privacy.section8.text': 'Si tiene preguntas, contáctenos a través de la página de soporte de App Store.'
+            }
+        };
 
-    <div class="section">
-        <h2>5. Data Security</h2>
-        <p>Since all data is stored locally on your device, it is protected by iOS security features. You can delete the app at any time to remove all stored data.</p>
-    </div>
+        // Get current language from localStorage or default to English
+        let currentLang = localStorage.getItem('privacyLanguage') || 'en';
 
-    <div class="section">
-        <h2>6. Third-Party Services</h2>
-        <p>Our app does not use any third-party services, analytics tools, or advertising networks. All functionality is self-contained within the app.</p>
-    </div>
+        // Function to change language
+        function changePrivacyLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('privacyLanguage', lang);
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+            
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (privacyTranslations[lang] && privacyTranslations[lang][key]) {
+                    element.textContent = privacyTranslations[lang][key];
+                }
+            });
+            
+            // Update active language button
+            document.querySelectorAll('.lang-btn').forEach(button => {
+                button.classList.remove('active');
+                if (button.getAttribute('data-lang') === lang) {
+                    button.classList.add('active');
+                }
+            });
+        }
 
-    <div class="section">
-        <h2>7. Children's Privacy</h2>
-        <p>Our app does not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.</p>
-    </div>
-
-    <div class="section">
-        <h2>8. Your Rights</h2>
-        <p>You have the right to:</p>
-        <ul>
-            <li>Access your data (stored locally on your device)</li>
-            <li>Delete your data (by deleting the app)</li>
-            <li>Modify your data (through the app settings)</li>
-        </ul>
-        <p>Since all data is stored locally, you have full control over it.</p>
-    </div>
-
-    <div class="section">
-        <h2>9. Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy in the app or on our website. The "Last Updated" date at the top of this policy indicates when it was last revised.</p>
-    </div>
-
-    <div class="section">
-        <h2>10. Contact Us</h2>
-        <div class="contact">
-            <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-            <p><strong>Email:</strong> nkk.alex@gmail.com</p>
-    
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>11. Compliance</h2>
-        <p>This Privacy Policy complies with:</p>
-        <ul>
-            <li>Apple App Store Guidelines</li>
-            <li>GDPR (General Data Protection Regulation)</li>
-            <li>CCPA (California Consumer Privacy Act)</li>
-            <li>COPPA (Children's Online Privacy Protection Act)</li>
-        </ul>
-    </div>
-
-    <hr style="margin: 40px 0;">
-    <p style="text-align: center; color: #666; font-size: 0.9em;">
-        © 2025 NUM CALENDAR. All rights reserved.
-    </p>
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set initial language
+            changePrivacyLanguage(currentLang);
+            
+            // Language switcher buttons
+            const langButtons = document.querySelectorAll('.lang-btn');
+            
+            langButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const lang = button.getAttribute('data-lang');
+                    changePrivacyLanguage(lang);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
-
-
-
