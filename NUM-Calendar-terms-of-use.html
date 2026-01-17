@@ -116,6 +116,7 @@
         <div class="section">
             <h2 data-i18n="terms.section1.title">1. Прийняття умов</h2>
             <p data-i18n="terms.section1.text"></p>
+            <p data-i18n="terms.section1.text2"></p>
         </div>
 
         <div class="section">
@@ -195,6 +196,7 @@
                 'terms.lastUpdated': 'Останнє оновлення: Січень 2026',
                 'terms.section1.title': '1. Прийняття умов',
                 'terms.section1.text': 'Завантажуючи, встановлюючи або використовуючи цей Додаток, ви погоджуєтеся дотримуватися цих Умов використання та підтверджуєте, що прочитали, зрозуміли та погоджуєтеся з нашою Політикою конфіденційності. Якщо ви не згодні з цими Умовами, будь ласка, не використовуйте Додаток.',
+                'terms.section1.text2': 'Ми залишаємо за собою право оновлювати ці Умови в будь-який час. Продовження використання Додатка після внесення змін означає вашу згоду з новими умовами.',
                 'terms.section2.title': '2. Вікові обмеження',
                 'terms.section2.text': 'Використовуючи Додаток, ви підтверджуєте, що досягли віку цифрової згоди у вашій країні проживання (зазвичай 13, 16 або 18 років) або отримали згоду батьків/опікунів.',
                 'terms.section3.title': '3. Медичне застереження (Важливо)',
@@ -232,6 +234,7 @@
                 'terms.lastUpdated': 'Last updated: January 2026',
                 'terms.section1.title': '1. Acceptance of Terms',
                 'terms.section1.text': 'By downloading, installing, or using this Application, you agree to be bound by these Terms of Use and acknowledge that you have read, understood, and agree to our Privacy Policy. If you do not agree to these terms, please do not use the Application.',
+                'terms.section1.text2': 'We reserve the right to update these Terms at any time. Continued use of the Application after any changes constitutes your acceptance of the new Terms.',
                 'terms.section2.title': '2. Age Restrictions',
                 'terms.section2.text': 'By using the Application, you confirm that you have reached the age of digital consent in your country of residence (usually 13, 16, or 18 years old) or have obtained parental/guardian consent.',
                 'terms.section3.title': '3. Medical Disclaimer (Important)',
@@ -269,6 +272,7 @@
                 'terms.lastUpdated': 'Последнее обновление: Январь 2026',
                 'terms.section1.title': '1. Принятие условий',
                 'terms.section1.text': 'Загружая, устанавливая или используя это Приложение, вы соглашаетесь соблюдать настоящие Условия использования и подтверждаете, что прочитали, поняли и согласны с нашей Политикой конфиденциальности. Если вы не согласны с этими условиями, пожалуйста, не используйте Приложение.',
+                'terms.section1.text2': 'Мы оставляем за собой право обновлять эти Условия в любое время. Продолжение использования Приложения после внесения изменений означает ваше согласие с новыми условиями.',
                 'terms.section2.title': '2. Возрастные ограничения',
                 'terms.section2.text': 'Используя Приложение, вы подтверждаете, что достигли возраста цифрового согласия в вашей стране проживания (обычно 13, 16 или 18 лет) или получили согласие родителей/опекунов.',
                 'terms.section3.title': '3. Медицинское предостережение (Важно)',
@@ -287,7 +291,7 @@
                 'terms.section6.item3': 'Подписка автоматически продлевается, если автоматическое продление не отключено как минимум за 24 часа до окончания текущего периода.',
                 'terms.section6.item4': 'Вы можете управлять подписками или отменить их в настройках учетной записи Apple ID.',
                 'terms.section7.title': '7. Поведение пользователя',
-                'terms.section7.intro': 'Все права на дизайн, тексты, графику и программный код Приложения принадлежат Разработчику. Использование материалов Приложения разрешается исключительно в личных некоммерческих целях.',
+                'terms.section7.intro': 'Все права на дизайн, тексты, графику и программный код Приложения принадлежат Разработчику. Использование материалов Приложения допускается только в личных некоммерческих целях.',
                 'terms.section7.text': 'Вы соглашаетесь:',
                 'terms.section7.item1': 'Не использовать Приложение для любых незаконных целей.',
                 'terms.section7.item2': 'Не пытаться декомпилировать или взломать код Приложения.',
@@ -306,6 +310,7 @@
                 'terms.lastUpdated': 'Última actualización: Enero 2026',
                 'terms.section1.title': '1. Aceptación de los Términos',
                 'terms.section1.text': 'Al descargar, instalar o utilizar esta Aplicación, usted acepta estar sujeto a estos Términos de Uso y reconoce que ha leído, comprendido y está de acuerdo con nuestra Política de Privacidad. Si no está de acuerdo con estos términos, por favor no utilice la Aplicación.',
+                'terms.section1.text2': 'Nos reservamos el derecho de actualizar estos Términos en cualquier momento. El uso continuado de la Aplicación después de cualquier cambio constituye su aceptación de los nuevos términos.',
                 'terms.section2.title': '2. Restricciones de edad',
                 'terms.section2.text': 'Al utilizar la Aplicación, usted confirma que ha alcanzado la edad de consentimiento digital en su país de residencia (generalmente 13, 16 o 18 años) o que ha obtenido el consentimiento de sus padres o tutores.',
                 'terms.section3.title': '3. Descargo de Responsabilidad Médica (Importante)',
@@ -355,7 +360,14 @@
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
                 if (termsTranslations[lang] && termsTranslations[lang][key]) {
-                    element.textContent = termsTranslations[lang][key];
+                    const text = termsTranslations[lang][key];
+                    element.textContent = text;
+                    // Hide empty elements
+                    if (text.trim() === '') {
+                        element.style.display = 'none';
+                    } else {
+                        element.style.display = '';
+                    }
                 }
             });
             
