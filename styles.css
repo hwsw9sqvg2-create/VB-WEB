@@ -123,6 +123,12 @@ body {
     gap: 1.5rem;
 }
 
+.nav-actions-main {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 .nav-cta {
     white-space: nowrap;
 }
@@ -1284,15 +1290,35 @@ body {
     }
 
     .nav-actions {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: 1rem;
         width: 100%;
         justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .nav-actions-main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .language-switcher {
+        flex-shrink: 0;
     }
 
     .nav-app-block {
-        margin-right: 10px;
+        margin-right: 0;
     }
+
+    .nav-actions-main .nav-cta {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     .nav-app-icon {
         width: 36px;
         height: 36px;
