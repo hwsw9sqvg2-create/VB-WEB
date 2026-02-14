@@ -327,6 +327,56 @@ body {
     color: var(--white);
 }
 
+.btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* NUM Calendar app block in nav — icon left, name + badge right */
+.nav-app-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin-right: 16px;
+}
+.nav-app-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+.nav-app-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+.nav-app-name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+.nav-app-badge-link {
+    display: block;
+    line-height: 0;
+}
+.nav-app-badge {
+    display: block;
+    height: 40px;
+    width: auto;
+    max-width: 120px;
+}
+
 /* Sections */
 .section {
     padding: 80px 0;
@@ -1238,6 +1288,20 @@ body {
         gap: 1rem;
         width: 100%;
         justify-content: space-between;
+    }
+
+    .nav-app-block {
+        margin-right: 10px;
+    }
+    .nav-app-icon {
+        width: 36px;
+        height: 36px;
+    }
+    .nav-app-name {
+        font-size: 0.9rem;
+    }
+    .nav-app-badge {
+        height: 34px;
     }
 
     .nav-cta {
