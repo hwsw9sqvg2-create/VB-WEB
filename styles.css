@@ -1256,7 +1256,7 @@ body {
     .nav-content {
         flex-wrap: wrap;
         gap: 1rem;
-        overflow: hidden;
+        overflow: visible;
     }
 
     .nav-name-block {
@@ -1290,8 +1290,8 @@ body {
     }
 
     .nav-actions {
-        flex-wrap: nowrap;
-        gap: 1rem;
+        flex-wrap: wrap;
+        gap: 0.75rem 1rem;
         width: 100%;
         justify-content: space-between;
         align-items: flex-start;
@@ -1389,6 +1389,17 @@ body {
 @media (min-width: 768px) {
     .contact-links {
         flex-wrap: nowrap;
+    }
+}
+
+/* Tablet and landscape: keep language switcher visible (no clipping) */
+@media (max-width: 1024px) {
+    .nav-content {
+        overflow: visible;
+        flex-wrap: wrap;
+    }
+    .nav-actions {
+        flex-wrap: wrap;
     }
 }
 
