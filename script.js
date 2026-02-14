@@ -9,6 +9,7 @@ const translations = {
         'nav.contact': 'Контакти',
         'nav.subtitle1': 'ПРАКТИЧНИЙ ПСИХОЛОГ',
         'nav.subtitle2': 'СПЕЦІАЛІСТ З НУМЕРОЛОГІЇ та СИМВОЛІЗМУ',
+        'nav.downloadApp': 'Скачати NUM Calendar',
         
         // Hero
         'hero.name': 'ВАЛЕНТИНА БАЛАЦЬКА',
@@ -113,6 +114,7 @@ const translations = {
         'nav.contact': 'Contact',
         'nav.subtitle1': 'LIFE COACH',
         'nav.subtitle2': 'SPECIALIST IN NUMEROLOGY & SYMBOLISM',
+        'nav.downloadApp': 'Download NUM Calendar',
         
         // Hero
         'hero.name': 'VALENTYNA BALATSKA',
@@ -217,6 +219,7 @@ const translations = {
         'nav.contact': 'Контакты',
         'nav.subtitle1': 'ПРАКТИЧЕСКИЙ ПСИХОЛОГ',
         'nav.subtitle2': 'СПЕЦИАЛИСТ ПО НУМЕРОЛОГИИ И СИМВОЛИЗМУ',
+        'nav.downloadApp': 'Скачать NUM Calendar',
         
         // Hero
         'hero.name': 'ВАЛЕНТИНА БАЛАЦКАЯ',
@@ -348,6 +351,13 @@ function changeLanguage(lang) {
             button.classList.add('active');
         }
     });
+
+    // App Store badge by language: uk -> UA, en -> US/UK, ru -> RU
+    const appStoreBadge = document.getElementById('appStoreBadge');
+    if (appStoreBadge) {
+        const badgeFile = lang === 'uk' ? 'appstore-badge-ua.svg' : lang === 'ru' ? 'appstore-badge-ru.svg' : 'appstore-badge-en.svg';
+        appStoreBadge.src = 'images/' + badgeFile;
+    }
 }
 
 // Initialize language on page load
