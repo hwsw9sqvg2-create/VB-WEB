@@ -1403,21 +1403,20 @@ body {
     }
 }
 
-/* Mobile landscape: как на макете — одна строка (имя, NUM Calendar, Book a Session), под ней горизонтальный ряд UA | ENG | RUS */
+/* Mobile landscape: всё в одной строке — NUM Calendar, Записатися на консультацію, UA | ENG | RUS */
 @media (orientation: landscape) and (max-height: 500px) {
     .nav-content {
         flex-wrap: wrap;
         overflow: visible;
-        align-items: flex-start;
+        align-items: center;
     }
     .nav-actions {
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         flex: 1 1 auto;
         min-width: 0;
         gap: 0.5rem 0.75rem;
         align-items: center;
-        align-content: flex-start;
     }
     .nav-actions-main {
         flex-direction: row;
@@ -1432,9 +1431,6 @@ body {
     }
     .language-switcher {
         flex-direction: row;
-        flex-basis: 100%;
-        justify-content: flex-end;
-        order: 10;
         flex-shrink: 0;
         gap: 0.4rem;
     }
