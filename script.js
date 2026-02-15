@@ -10,6 +10,8 @@ const translations = {
         'nav.subtitle1': 'ПРАКТИЧНИЙ ПСИХОЛОГ',
         'nav.subtitle2': 'СПЕЦІАЛІСТ З НУМЕРОЛОГІЇ та СИМВОЛІЗМУ',
         'nav.downloadApp': 'Скачати NUM Calendar',
+        'meta.title': 'Валентина Балацька - Психолог Онлайн Україна | Нумеролог | КПТ Терапія | Сімейні Розстановки',
+        'meta.description': 'Практикуючий психолог онлайн Україна. Спеціаліст з нумерології та символізму. Когнітивно-поведінкова терапія (КПТ), сімейні системні розстановки. Онлайн консультації через Zoom. Психологічна допомога, психологічна підтримка, психологічна терапія. Психолог для дорослих, психолог дистанційно, психолог по Zoom.',
         
         // Hero
         'hero.name': 'ВАЛЕНТИНА БАЛАЦЬКА',
@@ -115,6 +117,8 @@ const translations = {
         'nav.subtitle1': 'LIFE COACH',
         'nav.subtitle2': 'SPECIALIST IN NUMEROLOGY & SYMBOLISM',
         'nav.downloadApp': 'Download NUM Calendar',
+        'meta.title': 'Valentyna Balatska - Life Coach | CBT | Numerology & Symbolism | Constellations | Coaching',
+        'meta.description': 'Life coach specializing in numerology and symbolism. Uses Cognitive-Behavioral Therapy (CBT) and systemic-phenomenological approach. Private coaching sessions, constellations (individual and group), numerology and symbolism audit. Online via Zoom. Serves clients in English, Ukrainian, and Russian worldwide.',
         
         // Hero
         'hero.name': 'VALENTYNA BALATSKA',
@@ -220,6 +224,8 @@ const translations = {
         'nav.subtitle1': 'ПРАКТИЧЕСКИЙ ПСИХОЛОГ',
         'nav.subtitle2': 'СПЕЦИАЛИСТ ПО НУМЕРОЛОГИИ И СИМВОЛИЗМУ',
         'nav.downloadApp': 'Скачать NUM Calendar',
+        'meta.title': 'Валентина Балацкая - Психолог Онлайн | Нумеролог | КПТ Терапия | Семейные Расстановки',
+        'meta.description': 'Практикующий психолог онлайн. Специалист по нумерологии и символизму. Когнитивно-поведенческая терапия (КПТ), семейные системные расстановки. Консультации онлайн через Zoom. Психологическая помощь, поддержка, терапия. Психолог для взрослых, психолог дистанционно.',
         
         // Hero
         'hero.name': 'ВАЛЕНТИНА БАЛАЦКАЯ',
@@ -357,6 +363,36 @@ function changeLanguage(lang) {
     if (appStoreBadge) {
         const badgeFile = lang === 'uk' ? 'appstore-badge-ua.svg' : lang === 'ru' ? 'appstore-badge-ru.svg' : 'appstore-badge-en.svg';
         appStoreBadge.src = 'images/' + badgeFile;
+    }
+
+    // Title and meta description per language (SEO, sharing)
+    const t = translations[lang];
+    if (t && t['meta.title']) {
+        document.title = t['meta.title'];
+        const metaTitle = document.querySelector('meta[name="title"]');
+        if (metaTitle) metaTitle.setAttribute('content', t['meta.title']);
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute('content', t['meta.title']);
+        const twTitle = document.querySelector('meta[property="twitter:title"]');
+        if (twTitle) twTitle.setAttribute('content', t['meta.title']);
+    }
+    if (t && t['meta.description']) {
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', t['meta.description']);
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute('content', t['meta.description']);
+        const twDesc = document.querySelector('meta[property="twitter:description"]');
+        if (twDesc) twDesc.setAttribute('content', t['meta.description']);
+    }
+    const langMeta = document.querySelector('meta[name="language"]');
+    if (langMeta) {
+        const langNames = { uk: 'Ukrainian', en: 'English', ru: 'Russian' };
+        langMeta.setAttribute('content', langNames[lang] || 'Ukrainian');
+    }
+    const ogLocale = document.querySelector('meta[property="og:locale"]');
+    if (ogLocale) {
+        const locales = { uk: 'uk_UA', en: 'en_US', ru: 'ru_RU' };
+        ogLocale.setAttribute('content', locales[lang] || 'uk_UA');
     }
 }
 
