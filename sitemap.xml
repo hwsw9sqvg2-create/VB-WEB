@@ -3,36 +3,43 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://psynumerology.com/</loc>
-        <lastmod>2024-12-19</lastmod>
+        <lastmod>2026-01-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="uk" href="https://psynumerology.com/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://psynumerology.com/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://psynumerology.com/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://psynumerology.com/"/>
     </url>
     <url>
         <loc>https://psynumerology.com/booking.html</loc>
-        <lastmod>2024-12-19</lastmod>
+        <lastmod>2026-01-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://psynumerology.com/booking-private-session.html</loc>
-        <lastmod>2024-12-19</lastmod>
+        <lastmod>2026-01-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://psynumerology.com/booking-numerology.html</loc>
-        <lastmod>2024-12-19</lastmod>
+        <lastmod>2026-01-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://psynumerology.com/NUM-Calendar-privacy-polycy.html</loc>
-        <lastmod>2024-12-19</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <loc>https://psynumerology.com/num-calendar-privacy-policy.html</loc>
+        <lastmod>2026-01-29</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://psynumerology.com/NUM-Calendar-terms-of-use.html</loc>
+        <lastmod>2026-01-29</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
     </url>
 </urlset>
 
