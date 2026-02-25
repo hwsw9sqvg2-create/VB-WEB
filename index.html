@@ -60,6 +60,17 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://psynumerology.com/#website",
+      "url": "https://psynumerology.com",
+      "name": "Валентина Балацька - Психолог Онлайн",
+      "inLanguage": ["uk", "ru", "en"],
+      "description": "Практикуючий психолог онлайн, спеціаліст з нумерології та символізму. КПТ, сімейні розстановки. Калькулятор сумісності за датою народження."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
       "@type": "Person",
       "name": "Валентина Балацька",
       "alternateName": "Valentyna Balatska",
@@ -298,7 +309,10 @@
                                 </a>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary nav-cta open-booking-modal" data-i18n="hero.cta">Записатися на консультацію</button>
+                        <div class="nav-cta-group">
+                            <button type="button" class="btn btn-primary nav-cta open-booking-modal" data-i18n="hero.cta">Записатися на консультацію</button>
+                            <a href="compatibility-calculator.html" class="btn btn-primary nav-cta nav-compat-cta" data-i18n="nav.compatibility">Калькулятор сумісності</a>
+                        </div>
                     </div>
                     <div class="language-switcher">
                         <button class="lang-btn active" data-lang="uk">UA</button>
@@ -498,6 +512,7 @@
     <footer class="footer">
         <div class="container">
             <p data-i18n="footer.text">&copy; 2024 Валентина Балацька. Всі права захищені.</p>
+            <p style="margin-top: 0.5rem;"><a href="compatibility-calculator.html" class="footer-compat-link" data-i18n-aria-label="nav.compatibility" aria-label="Калькулятор сумісності" title="Калькулятор сумісності"><span aria-hidden="true">🧮</span></a></p>
         </div>
     </footer>
 

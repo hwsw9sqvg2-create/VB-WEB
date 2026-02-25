@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /.netlify/
 # 1 second between requests (reduces server load). Googlebot ignores Crawl-delay.
 Crawl-delay: 1
 
