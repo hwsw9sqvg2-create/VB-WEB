@@ -595,6 +595,7 @@ function fillCompatDateSelects(lang) {
             }
         }
         if (monthEl) {
+            const savedMonth = monthEl.value;
             monthEl.innerHTML = '';
             for (let m = 1; m <= 12; m++) {
                 const opt = document.createElement('option');
@@ -602,6 +603,7 @@ function fillCompatDateSelects(lang) {
                 opt.textContent = t['compat.month' + m] || m;
                 monthEl.appendChild(opt);
             }
+            if (savedMonth) monthEl.value = savedMonth;
         }
         if (yearEl && !yearEl.querySelector('option')) {
             for (let y = yearEnd; y >= yearStart; y--) {
